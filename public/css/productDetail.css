@@ -1,0 +1,363 @@
+    /*Mobil First*/
+/*header*/
+.contenedor-encabezado-principal {
+    padding-top: 4px
+}
+#encabezado-principal {
+    display: flex;
+    background-color: #eee;
+}
+.banner {
+    height: 410px;
+    width: 100%;
+    background-color: #000;
+}
+.menu {
+    display: flex;
+    position: relative;
+}
+.menu-burger-boton {
+    border: none;
+    padding: 0 2px;
+    color: #000;
+}
+.menu-burger {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    padding: 2px 2px;
+    background-color: #ddd;
+}
+.menu-burger__opcion {
+    font-size: 14px;
+    padding: 3px 8px;
+}
+.menu-burger__seccion-link {
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+.menu-burger__seccion-link:hover {
+    background-color: #ddd;
+}
+.menu:hover .menu-burger {
+    display: block;
+}
+#nombre-de-la-tienda {
+    width: 100px;
+    padding: 1px;
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+}
+.contenedor-navegacion-principal {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+#navegacion-principal {
+    display: flex;
+    flex-grow: 2;
+}
+.contenedor-usuario {
+    width: 21%;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.usuario-boton {
+    display: inline;
+    border: none;
+    padding: 10px 10px;
+    color: #000;
+}
+.usuario {
+    display: flex;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 70%;
+    right: 0;
+    padding: 2px 2px;
+    background-color: #ddd;
+}
+.usuario__opcion {
+    text-align: center;
+    font-size: 14px;
+    padding: 3px 8px;
+}
+.usuario__opcion-link {
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+.usuario__opcion-link:hover {
+    background-color: #ddd;
+}
+.contenedor-usuario:hover .usuario {
+    display: block;
+}
+.carrito {
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+}
+.barra-de-busqueda {
+    display: flex;
+    align-items: center;
+    display: block;
+    padding-top: 6px;
+}
+/*productos*/
+/*compra-venta*/
+/*footer*/
+#pie-de-pagina {
+    padding: 4px;
+    font-size: 12px; 
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background-color: #000;
+}
+.contenedor-de-descripcion-tienda {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+}
+#logo-pie-de-pagina {
+    height: 75px;
+    width: 75px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.descripcion-tienda {
+    display: flex;
+    display: block;
+    flex-grow: 1;
+    flex-direction: column;
+    margin-right: 10px;
+    padding-left: 30px;
+    text-align: center;
+    font-size: 15px;
+}
+.nombre-tienda {
+    font-size: 24px;
+}
+.contenedor-de-informacion {
+    padding-bottom: 8px;
+}
+.info-contacto {
+    padding-left: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.informacion, .contacto {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.informacion__opcion {
+    display: flex;
+    padding: 2px 6px;
+}
+.informacion__opcion-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+.contacto__opcion {
+    display: flex;
+    display: block;
+    padding: 2px 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+@media (min-width: 460px) {
+    /*tablets*/
+}
+@media (min-width: 768px) {
+    /*laptop*/
+}
+@media (min-width: 1200px) {
+/*monitor*/
+    /*header*/
+    .contenedor-encabezado-principal {
+        padding-top: 6px
+    }
+    #encabezado-principal {
+        display: flex;
+        padding: 1px;
+        background-color: #eee;
+    }
+    .banner {
+        height: 550px;
+        width: 100%;
+        background-color: #000;
+    }
+    .menu {
+        display: flex;
+        position: relative;
+    }
+    .menu-burger-boton {
+        border: none;
+        padding: 0 10px;
+        color: #000;
+        font-size: 17px;
+    }
+    .menu-burger {
+        display: none;
+        position: absolute;
+        top: 70%;
+        left: 0;
+        padding: 2px 2px;
+        background-color: #ddd;
+    }
+    .menu-burger__opcion {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+    .menu-burger__seccion-link {
+        display: block;
+        color: #000;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .menu-burger__seccion-link:hover {
+        background-color: #ddd;
+    }
+    .menu:hover .menu-burger {
+        display: block;
+    }
+    #nombre-de-la-tienda {
+        flex: 1;
+        padding: 6px;
+        font-size: 30px;
+    }
+    .contenedor-navegacion-principal {
+        display: flex;
+        align-items: stretch;
+    }
+    #navegacion-principal {
+        display: flex;
+        justify-content: space-around;
+    }
+    .contenedor-usuario {
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+    }
+    .usuario-boton {
+        width: 50%;
+        display: inline;
+        border: none;
+        color: #000;
+        font-size: 17px;
+    }
+    .usuario {
+        display: flex;
+        display: none;
+        position: absolute;
+        top: 70%;
+        padding: 2px 5%;
+        background-color: #ddd;
+    }
+    .usuario__opcion {
+        text-align: center;
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+    .usuario__opcion-link {
+        display: block;
+        color: #000;
+        text-decoration: none;
+    }
+    .usuario__opcion-link:hover {
+        background-color: #ddd;
+    }
+    .contenedor-usuario:hover .usuario {
+        display: block;
+    }
+    .carrito {
+        text-align: center;
+        color: #000;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .barra-de-busqueda {
+        display: flex;
+        align-items: center;
+        display: block;
+        padding: 12px 10px;
+    }
+    /*productos*/
+    /*compra-venta*/
+    /*footer*/
+    #pie-de-pagina {
+        padding: 4px;
+        font-size: 12px; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: #fff;
+        background-color: #000;
+    }
+    .contenedor-de-descripcion-tienda {
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+    }
+    #logo-pie-de-pagina {
+        height: 100px;
+        width: 300px;
+    }
+    .descripcion-tienda {
+        display: flex;
+        display: block;
+        flex-grow: 1;
+        flex-direction: column;
+        margin-right: 10px;
+        padding-top: 30px;
+        padding-left: 30px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .nombre-tienda {
+        font-size: 35px;
+    }
+    .contenedor-de-informacion {
+        padding-bottom: 8px;
+    }
+    .info-contacto {
+        padding-left: 20px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .informacion, .contacto {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .informacion__opcion {
+        display: flex;
+        padding: 2px 6px;
+    }
+    .informacion__opcion-link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .contacto__opcion {
+        display: flex;
+        display: block;
+        padding: 2px 6px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}

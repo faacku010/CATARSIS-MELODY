@@ -1,0 +1,393 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 368px;
+    background-color: #7c3c986b;
+}
+/* header */
+
+header {
+    width: 100%;
+    background-color:#2121217e;
+    height: auto;
+}
+
+.conteiner-header {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+}
+
+.top-bar-header {
+    display: flex;
+    justify-content:flex-start;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.burger-menu, .burger-carrito {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    background-color: darkolivegreen;
+    color: white;
+    font-size: 26px;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    margin: 0px auto;
+    margin-top: -5px;
+}
+
+.logo {
+    width: 55%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    padding: 0px 10px;
+    margin-bottom: 5px;
+}
+
+.bot-bar-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.barra-busqueda {
+    display: flex;
+}
+
+.barra-busqueda input {
+    width: 80%;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.barra-busqueda i {
+    font-size: 20px;
+    margin: 0px 8px;
+    align-self: center;
+}
+
+.sesion-register {
+    text-align: end;
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+}
+
+.sesion-register a {
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+    background-color:#5F6A6A;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+main h2 {
+    text-align: center;
+}
+
+.destacados, .ofertas {
+    display: none;
+}
+
+section {
+    background-color: rgba(32, 148, 168, 0.774);
+    padding-top: 10px;
+}
+
+.categorias {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.categorias h4 {
+    font-size: 25px;
+}
+
+.image-main {
+    width: 250px;
+    height: 250px;
+    background-color: #ffffff;
+
+}
+
+.categorias p {
+    padding: 10px;
+}
+
+
+/* footer */
+
+footer section {
+    border-radius: 10px;
+    background-color: #2121217e;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+    padding: 4px;
+    text-align: center;
+    justify-content: center;
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+.redes ul {
+    margin: auto;
+    height: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+
+}
+
+.redes a {
+    font-size: 30px;
+}
+
+.section li {
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    body {
+        width: 768px;
+    }
+    
+    .top-bar-header {
+        background-color: rgba(95, 158, 160, 0.377);
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: auto;
+        height: 80px;
+    }
+    
+    .bot-bar-header {
+        justify-content: space-between;
+    }
+
+    .barra-busqueda {
+        width: 60%;
+    }
+
+    .barra-busqueda input {
+        width: 60%;
+        font-size: 18px;
+        text-align: center;
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-right: 2px;
+    }
+    
+    .barra-busqueda i {
+        font-size: 22px;
+        width: 40px;
+        height: 40px;
+        margin: 0px 2px;
+        padding: 10px 0px;
+        display: flex;
+        justify-content: center;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+    
+    .sesion-register {
+        font-size: 23px;
+        align-self: center;
+    }
+    
+    .sesion-register a {
+        text-decoration: none;
+        color: black;
+        margin-right: 12px;
+        margin-bottom: 5px;
+        align-self: center;
+    }
+    
+    .bot-bar-header input {
+        height: 40px;
+        align-self: center;
+    }
+
+    /* main */
+    main {
+        background-color: #AEB6BF ;
+    }
+
+    main h2 {
+        font-size: 25px;
+    }
+
+    section {
+        margin: 5px auto;
+        padding-bottom: 10px;
+        width: 75%;
+        display: flex;
+        flex-wrap: wrap;        
+    }
+
+    .categorias {
+        width: 50%;
+    }
+
+    .categorias h4 {
+       font-size: 25px;
+    }
+
+    .destacados, .ofertas {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 98%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .image-destacado {
+        width: 140px;
+        height: 140px;
+    }
+
+    .categoria-destacado, .categoria-oferta {
+        background-color: rgba(137, 43, 226, 0.281);
+        margin: 0px 4px;
+        padding: 3px 2px;
+        width: 25%;
+        text-align: center;
+    }
+
+    .categoria-destacado p, .categoria-oferta p {
+        font-size: 15px;
+    }
+
+    /* footer */
+
+    footer {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        }
+    
+        footer section {
+            width: 30%;
+            height: 160px;
+        }
+
+}
+
+
+@media (min-width: 1200px) {
+    body {
+        width: 1200px;
+    }
+
+    header {
+        width: 90%;
+        margin: auto;
+    }
+
+    .logo {
+        width: 40%;
+        height: auto;
+    }
+
+    .burger-menu, .burger-carrito {
+        width: 70px;
+        font-size: 40px;
+        height: 70px;
+    }
+
+    .barra-busqueda {
+        width: 60%;
+        height: 80px;
+    }
+
+    .barra-busqueda input {
+        width: 70%;
+        height: 60px;
+        font-size: 25px;
+        text-align: center;
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-right: 2px;
+    }
+    
+    .barra-busqueda i {
+        font-size: 30px;
+        width: 60px;
+        height: 60px;
+        margin: 0px 4px;
+        padding: 13px 0px;
+    }
+    
+    .sesion-register {
+        font-size: 30px;
+    }
+    
+    .sesion-register a {
+        text-decoration: none;
+        color: black;
+        margin-right: 12px;
+        margin-bottom: 5px;
+        align-self: center;
+    }
+
+    /* main */
+
+    section {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .image-destacado {
+        background-color: #5f6a6a5d;
+        width: 200px;
+        height: 220px;
+        margin: 5px auto;
+    }
+
+    /* footer */
+
+    footer {
+        width: 100%;
+        flex-wrap: nowrap;
+        margin-top: 30px 0px;
+        border-top: solid 2px #0000006c;
+        padding: 30px 0px;
+    }
+
+    footer section {
+        margin: 0px 10px;
+        height: auto;
+        padding: 0px 5px;
+    }
+
+    .footer-items ul, .footer-items p {
+        font-size: 19px;
+    }
+}

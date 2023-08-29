@@ -1,0 +1,16 @@
+    * {
+    box-sizing:border-box;
+    margin: 0;}
+
+body {
+    background-color: aqua;
+    width: 368px;
+}
+
+header {
+    background-color: blue;
+    width: 50%;
+    color: darkgoldenrod;
+    margin-left: ;
+    /* margin: 50px; */
+}
