@@ -28,6 +28,8 @@ Equipo:
 
 -Mateo Martin Calisaya: Ultimo año de secundaria, tengo 18 años. Aún no decidí que carrera univeritaria seguire para el año siguiente. Soy apasionado de la música como del fútbol e hincha de Gimnasia de Jujuy. Soy muy nuevo en el mundo de la programación, pero lo veo como algo necesario e interesante, por lo que decidí entrar a este curso.
 
+New: -Rocio Belen Rodriguez: Hola!, tengo 17 años, estoy cursando el ultimo año de secundaria en la orientacion de Cs Sociales. Me gusta escuchar musica, ver series y los videojuegos. Mis pasatiempos; dibujar y hacer fandubs.Apasionada de la tecnologia y robotica, soy nueva en el area de la programacion y dispuesta a aprender algo nuevo cada dia en mi ambito academico y de formacion. Gracias!!!
+
 Sitios de referencia:
 
 https://www.famusic.com.ar/
