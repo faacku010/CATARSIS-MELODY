@@ -9,6 +9,7 @@ index: (req, res) => {
         /* comunicarse con el modelo, conseguir informacion */
         res.sendFile(path.resolve(__dirname, "../views/index.html"))
     }
+
 };
 
 /* exportamos el objeto literal con los distintos metodos, que se usara en el enrutador por defecto */

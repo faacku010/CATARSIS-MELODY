@@ -5,31 +5,22 @@ const path = require('path');
 const app = express();
 
 /* importamos los distintos enrutadores */
-/* const rutasProductos = require('./routes/productos.js'); */
-/* const mainRouter =require('./routes/mainRouter.js'); */
-/* const registerRouter = require('./routes/registerRouter.js');
-const loginRouter = require('./routes/loginRouter.js');
-const carritoRouter  = require('./controllers/carritoController.js');
- */
-
-app.listen(3020,() => {
-    console.log('servidor corriendo en puerto https://localhost:3020');
-});
-
+const productoRouter = require('./src/routes/productoRouter.js');
+const mainRouter =require('./src/routes/mainRouter.js');
+const userRouter = require('./src/routes/userRouter.js');
 
 /* usando recursos estaticos */
 app.use( express.static(path.resolve(__dirname, './public')));
 
 
 /* usando los recursos estaticos */
-/* app.use('/', mainRouter); */
-/* app.use('/productos', rutasProductos);
-app.use('/registro', registerRouter);
-app.use('/login', loginRouter);
-app.use('/carrito', carritoRouter); */
+app.use('/', mainRouter);
+app.use('/productos', productoRouter);
+app.use('/usuarios', userRouter);
 
 
-app.get('/', (req, res) => {
+
+/* app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './src/views/index.html'));
 })
 
@@ -48,10 +39,9 @@ app.get('/registro', (req, res) => {
 app.get('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, './src/views/login.html'));
 })
-
-app.get('/practica', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './src/views/practica.html'));
-})
-
+ */
 
 /* ponemos a escuchar el servidor */
+app.listen(3020,() => {
+    console.log('servidor corriendo en puerto https://localhost:3020');
+});

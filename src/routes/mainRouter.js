@@ -12,5 +12,6 @@ const mainController = require('../controllers/mainController.js')
 /* Procesa el pedido de get con ruta */
 router.get('/', mainController.index);
 
+
 /* exportamos la variable router ya con todas las rutas "guardadas", que se usara en app.js */
 module.exports = router;
