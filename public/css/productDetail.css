@@ -205,7 +205,7 @@ h4{
 
 
 
-/*anterior css*/
+/* anterior css
 .contenedor-encabezado-principal {
     padding-top: 4px
 }
@@ -316,9 +316,9 @@ h4{
     display: block;
     padding-top: 6px;
 }
-/*productos*/
-/*compra-venta*/
-/*footer*/
+productos
+compra-venta
+footer
 #pie-de-pagina {
     padding: 4px;
     font-size: 12px; 
@@ -382,14 +382,13 @@ h4{
     font-weight: 600;
 }
 @media (min-width: 460px) {
-    /*tablets*/
+    
 }
 @media (min-width: 768px) {
-    /*laptop*/
+    
 }
 @media (min-width: 1200px) {
-/*monitor*/
-    /*header*/
+
     .contenedor-encabezado-principal {
         padding-top: 6px
     }
@@ -501,9 +500,7 @@ h4{
         display: block;
         padding: 12px 10px;
     }
-    /*productos*/
-    /*compra-venta*/
-    /*footer*/
+  
     #pie-de-pagina {
         padding: 4px;
         font-size: 12px; 
@@ -566,4 +563,4 @@ h4{
         font-size: 16px;
         font-weight: 600;
     }
-}
+} */
