@@ -2,7 +2,7 @@ const path = require("path");
 
 let productController = {
     carrito: function (req, res) {
-        res.sendFile(path.resolve(__dirname, '../views/productCart.html'));
+        res.sendFile(path.resolve(__dirname, '../views/productCart2.html'));
     },
     detalle: function(req, res) {
         res.sendFile(path.resolve(__dirname, '../views/productDetail.html'));
