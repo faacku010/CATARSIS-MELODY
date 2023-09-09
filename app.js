@@ -9,6 +9,9 @@ const productoRouter = require('./src/routes/productoRouter.js');
 const mainRouter =require('./src/routes/mainRouter.js');
 const userRouter = require('./src/routes/userRouter.js');
 
+app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, 'views'));
+
 /* usando recursos estaticos */
 app.use( express.static(path.resolve(__dirname, './public')));
 
