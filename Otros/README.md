@@ -22,12 +22,6 @@ Equipo:
 
 -Agustin Santiago Ponce: Soy estudiante de la tecnicatura de diseño de videojuegos, en la facultad de ingeniería. Voy a dar mi mejor esfuerzo para aprender todo lo enseñado en el curso. Me encantan los animales, la música y los videojuegos. Trabajo en un negocio familiar de venta de alimento de animales. Tengo pensado seguir adelante y aprender a programar como mi hermano. Saludos !!!
 
--Camila Melisa Benegas: Tengo 23 años. Me gusta mucho los números y los calculos, por lo que estudio profesorado de Matemáticas. El área de informática me cuesta pero es algo que me gustaria aprender porque siento que es el futuro. En mis tiempos libres me encanta escribir canciones, poemas, mini historias,etc. Quiero aprender de todo un poco y abrir mi futuro a diferentes posibilidades.
-
--Lourdes Maidana Rojas: Estudiante de secundaria con orientación en las Ciencias Naturales. Apasionada por los deportes. Disfruto pasar tiempo con mi familia y escuchar música. Tengo altas habilidades para escuchar y comprender a los demás. Siempre estoy abierta y dispuesta a nuevas ideas.
-
--Mateo Martin Calisaya: Ultimo año de secundaria, tengo 18 años. Aún no decidí que carrera univeritaria seguire para el año siguiente. Soy apasionado de la música como del fútbol e hincha de Gimnasia de Jujuy. Soy muy nuevo en el mundo de la programación, pero lo veo como algo necesario e interesante, por lo que decidí entrar a este curso.
-
 New: -Rocio Belen Rodriguez: Hola!, tengo 17 años, estoy cursando el ultimo año de secundaria en la orientacion de Cs Sociales. Me gusta escuchar musica, ver series y los videojuegos. Mis pasatiempos; dibujar y hacer fandubs.Apasionada de la tecnologia y robotica, soy nueva en el area de la programacion y dispuesta a aprender algo nuevo cada dia en mi ambito academico y de formacion. Gracias!!!
 
 Sitios de referencia:
