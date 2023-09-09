@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catarsis Melody</title>
+    <link href="/css/index.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
+</head>
+
+<main>
+    <div><h1>Carrito de compras</h1></div>
+    <section>
+        <article class="conteiner-article">
+            <img src="/images/guitarra-clasica-valencia.jpg" width="100px" class="article-image">  
+        <div class="item-conteiner">
+            <div class="txt-article">
+                <h4>Guitarra Negra Clasica Valencia|Intermedio|Color Esfumado Satinado</h4> 
+            </div>
+            <div class="icon-article">
+                <i class="fa-solid fa-trash-can"></i> 
+            </div>
+            <div class="button-article">
+                <input type="number"> 
+            </div>
+            <div class="price-article">
+                <h5>$ 250.500,00</h5> 
+            </div>
+        </div>
+        </article>    
+
+        <article class="conteiner-article">
+            <img src="/images/bateria-pearl.jpg" width="100px" class="article-image">
+        <div class="item-conteiner">
+            <div class="txt-article">
+                <h4>Bateria Pearl Decade Maple 229 White Satin Pearl 4 Cuerpos</h4> 
+            </div>
+            <div class="icon-article">
+                <i class="fa-solid fa-trash-can"></i> 
+            </div>
+            <div class="button-article">
+                <input type="number"> 
+            </div>
+            <div class="price-article">
+                <h5>$ 250.500,00</h5> 
+            </div>
+        </div>
+        </article>
+        
+        <article class="conteiner-article">
+            <img src="/images/guitarra-negra-criolla-gracia-.jpg" width="100px" class="article-image">
+        <div class="item-conteiner">
+            <div class="txt-article">
+                <h4>Guitarra Negra Clasica Valencia|Intermedio|Color Esfumado Satinado</h4>  
+            </div>
+            <div class="icon-article">
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="button-article">
+               <input type="number"> 
+            </div>
+            <div class="price-article">
+               <h5>$ 250.500,00</h5> 
+            </div>  
+            </div>
+
+        </article>
+    </section>
+
+    <section class="seccion-bot-main">
+        <div>
+            <h2>shipping Calculator</h2>              
+        </div>            
+        <div class="formulario">
+            <form action="/shipping-calculator" method="POST" class="create-form">       
+            <div class="control-form">
+                <label>Provincia</label>
+                <select name="provincia" class="control">
+                    <option value="Jujuy">Jujuy</option>
+                    <option value="Salta">Salta</option>
+                    <option value="Rio Negro">Rio Negro</option>
+                    <option value="Cordoba">Cordoba</option>
+                    <option value="Catamarca">Catamarca</option>
+                    <option value="Chubut">Chubut</option>
+                </select> 
+            </div>
+            <div class="control-form">
+                <label>Ciudad</label>
+                <input type="text" name="Ciudad" placeholder="Ciudad" class="control">
+            </div>
+            <div class="control-form">
+                <label>Codigo Postal</label>
+                <input type="number" name="CodigoPostal" placeholder="Su codigo Postal" class="control">
+            </div>
+            <div class="control-form">
+                <button type="submit">Actualizar</button>
+            </div>
+            </form>
+        </div>
+
+        <div><h2>Total del carrito</h2></div>
+    <div class="formulario">
+        <div class="create-form">
+            <div class="subtotal-carrito">
+                <h5>subtotal del carrito</h5>
+                <p>$ 1.270.000</p>
+            </div>
+            <div class="subtotal-carrito">
+                <h5>Pedido Total</h5>
+                <p>$ 1.270.000</p>
+            </div>
+            <div class="caja-boton">
+                <button type="submit" class="boton-compra">Finalizar Compra</button>
+            </div>
+            <div>
+                <a href="http://localhost:3020/">Continuar Comprando</a>
+            </div>
+        </div>            
+    </div>
+
+    </section>
+</main>
