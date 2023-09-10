@@ -2,19 +2,12 @@ const path = require("path");
 
 let productController = {
     carrito: function (req, res) {
-        res.sendFile(path.resolve(__dirname, '../views/productCart2.html'));
+        res.render('products/carrito');
     },
-    detalle: function(req, res) {
-        res.sendFile(path.resolve(__dirname, '../views/productDetail.html'));
-        },
 
-/*     detalleComentarios: function(req, res) {
-        if (req.params.idComentario == undefined) {
-            res.send('Bienvenidos a los comentarios del producto ' + req.params.idProducto + ' y estas enfocado en el comentario ' + req.params.idComentario); 
-        } else {
-            res.send('Bienvenidos a los comentarios del producto ' + req.params.idProducto + ' y estas enfocado en el comentario ' + req.params.idComentario);
-        }
-    }, */
+    detalle: function(req, res) {
+        res.render('products/detalle');
+    }
 };
 
 module.exports = productController;
