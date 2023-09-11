@@ -5,7 +5,9 @@
 }
 
 body {
-  background-color: #A75D5D;  }
+  width: 368px;
+  background-color: #A75D5D;  
+}
 
 header {
   width: 100%;
@@ -187,6 +189,68 @@ text-decoration: none;
 
 @media (min-width: 768px) {
 
+  body {
+    width: 768px;
+}
+
+.top-bar-header {
+    background-color: rgba(95, 158, 160, 0.377);
+    justify-content: space-between;
+}
+
+.logo {
+    width: auto;
+    height: 80px;
+}
+
+.bot-bar-header {
+    justify-content: space-between;
+}
+
+.barra-busqueda {
+    width: 60%;
+}
+
+.barra-busqueda input {
+    width: 60%;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 2px;
+}
+
+.barra-busqueda i {
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    margin: 0px 2px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.sesion-register {
+    font-size: 23px;
+    align-self: center;
+}
+
+.sesion-register a {
+    text-decoration: none;
+    color: black;
+    margin-right: 12px;
+    margin-bottom: 5px;
+    align-self: center;
+}
+
+.bot-bar-header input {
+    height: 40px;
+    align-self: center;
+}
+
+
 /* footer */
 
 footer {
@@ -203,6 +267,62 @@ footer section {
 }
 
 @media (min-width: 1200px) {
+
+  body {
+    width: 1200px;
+}
+
+header {
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    width: 40%;
+    height: auto;
+}
+
+.burger-menu, .burger-carrito {
+    width: 70px;
+    font-size: 40px;
+    height: 70px;
+}
+
+.barra-busqueda {
+    width: 60%;
+    height: 80px;
+}
+
+.barra-busqueda input {
+    width: 70%;
+    height: 60px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 2px;
+}
+
+.barra-busqueda i {
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    margin: 0px 4px;
+    padding: 13px 0px;
+}
+
+.sesion-register {
+    font-size: 30px;
+}
+
+.sesion-register a {
+    text-decoration: none;
+    color: black;
+    margin-right: 12px;
+    margin-bottom: 5px;
+    align-self: center;
+}
+
 
 /* footer */
 
