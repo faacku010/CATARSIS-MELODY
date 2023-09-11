@@ -1,215 +1,227 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-image: url('../images/crescent\ melody.jpg');
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  header {
-    width: 100%;
-    background-color:#2121217e;
-    height: auto;
-  }
-  
-  .conteiner-header {
-    width: 100%;
-    margin: 0;
-    padding: 5px;
-  }
-  
-  .top-bar-header {
-    display: flex;
-    justify-content:flex-start;
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .burger-menu, .burger-carrito {
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    background-color: darkolivegreen;
-    color: white;
-    font-size: 26px;
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
-    margin: 0px auto;
-    margin-top: -5px;
-  }
-  
-  .logo {
-    width: 55%;
-    height: auto;
-    text-align: center;
-    display: flex;
-    padding: 0px 10px;
-    margin-bottom: 5px;
-  }
-  
-  .bot-bar-header {
-    width: 100%;
-    height: auto;
-    display: flex;
-  }
-  
-  .barra-busqueda {
-    display: flex;
-  }
-  
-  .barra-busqueda input {
-    width: 80%;
-    height: 40px;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 10px;
-  }
-  
-  .barra-busqueda i {
-    font-size: 20px;
-    margin: 0px 8px;
-    align-self: center;
-  }
-  
-  .sesion-register {
-    text-align: end;
-    width: auto;
-    height: auto;
-    margin-right: 5px;
-  }
-  
-  .sesion-register a {
-    text-decoration: none;
-    color: black;
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-  
-  .nav-marge{
-      margin-left : 10px;
-  }
-  .form-register {
-    width: 400px;
-    background: #011324;
-    padding: 30px;
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 4px;
-    font-family: 'calibri';
-    color: white;
-    box-shadow: 7px 13px 37px #000;
-  }
-  
-  .form-register h4 {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-  
-  .controls {
-    width: 100%;
-    background: #24303c;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #b17b18;
-    font-family: 'calibri';
-    font-size: 18px;
-    color: white;
-  }
-  
-  .form-register p {
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 40px;
-  }
-  
-  .form-register a {
-    color: rgb(251, 255, 0);
-    text-decoration: none;
-  }
-  
-  .form-register a:hover {
-    color: rgb(251, 255, 0);
-    text-decoration: underline;
-  }
-  
-  .form-register .botons {
-    width: 40%;
-    background: #af8b28;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    margin-left: 25px;
-    font-size: 16px;
-  }
+body {
+  background-color: #A75D5D;  }
 
-  /*footer*/
- #pie-de-pagina {
-  padding: 4px;
-  font-size: 12px; 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: #fff;
-  background-color: #000;
+header {
+  width: 100%;
+  background-color:#2121217e;
+  height: auto;
 }
-.contenedor-de-descripcion-tienda {
-  display: flex;
-  flex-direction: column;
-  padding-top: 40px;
+
+.conteiner-header {
+  width: 100%;
+  margin: 0;
+  padding: 5px;
 }
-#logo-pie-de-pagina {
-  height: 100px;
-  width: 300px;
-}
-.descripcion-tienda {
+
+.top-bar-header {
   display: flex;
-  display: block;
-  flex-grow: 1;
-  flex-direction: column;
-  margin-right: 10px;
-  padding-top: 30px;
-  padding-left: 30px;
+  justify-content:flex-start;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.burger-menu, .burger-carrito {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  background-color: darkolivegreen;
+  color: white;
+  font-size: 26px;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+  margin-top: -5px;
+}
+
+.logo {
+  width: 55%;
+  height: auto;
   text-align: center;
+  display: flex;
+  padding: 0px 10px;
+  margin-bottom: 5px;
+}
+
+.bot-bar-header {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.barra-busqueda {
+  display: flex;
+}
+
+.barra-busqueda input {
+  width: 80%;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.barra-busqueda i {
   font-size: 20px;
+  margin: 0px 8px;
+  align-self: center;
 }
-.nombre-tienda {
-  font-size: 35px;
+
+.sesion-register {
+  text-align: end;
+  width: auto;
+  height: auto;
+  margin-right: 5px;
 }
-.contenedor-de-informacion {
-  padding-bottom: 8px;
-}
-.info-contacto {
-  padding-left: 20px;
-  font-size: 22px;
-  font-weight: bold;
-}
-.informacion, .contacto {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-.informacion__opcion {
-  display: flex;
-  padding: 2px 6px;
-}
-.informacion__opcion-link {
-  color: #fff;
+
+.sesion-register a {
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
+  color: black;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
-.contacto__opcion {
-  display: flex;
-  display: block;
-  padding: 2px 6px;
+
+
+.nav-marge{
+    margin-left : 10px;
+}
+.form-register {
+  width: 400px;
+  background: #FFC3A1;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  background: #EFB495;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #b17b18;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+}
+
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register a {
+  color: rgb(251, 255, 0);
+  text-decoration: none;
+}
+
+.form-register a:hover {
+  color: rgb(251, 255, 0);
+  text-decoration: underline;
+}
+
+.form-register .botons {
+  width: 40%;
+  background: #af8b28;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  margin-left: 25px;
   font-size: 16px;
-  font-weight: 600;
+}
+
+/*footer*/
+footer section {
+border-radius: 10px;
+background-color: #2121217e;
+width: 80%;
+height: auto;
+margin: auto;
+margin-top: 10px;
+padding: 4px;
+text-align: center;
+justify-content: center;
+}
+
+section h2 {
+margin-bottom: 10px;
+}
+
+.redes ul {
+margin: auto;
+height: auto;
+width: 80%;
+display: flex;
+justify-content: space-around;
+text-decoration: none;
+
+}
+
+.redes a {
+font-size: 30px;
+}
+
+.section li {
+text-decoration: none;
+}
+
+@media (min-width: 768px) {
+
+/* footer */
+
+footer {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+  
+footer section {
+  width: 30%;
+  height: 160px;
+}
+}
+
+@media (min-width: 1200px) {
+
+/* footer */
+
+footer {
+  width: 100%;
+  flex-wrap: nowrap;
+  margin-top: 30px 0px;
+  border-top: solid 2px #0000006c;
+  padding: 30px 0px;
+}
+
+footer section {
+  margin: 0px 10px;
+  height: auto;
+  padding: 0px 5px;
+}
+
+.footer-items ul, .footer-items p {
+  font-size: 19px;
+}
+
 }
