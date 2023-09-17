@@ -1,6 +1,12 @@
-<%- include('./partials/head') %>
-  <link rel="stylesheet" href="css/creation.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catarsis Melody</title>
+    <link href="/css/index.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
+</head>
 
   <body>
 
@@ -9,7 +15,7 @@
      <main>
       <div class="formulario">
         <h1 class>Formulario de carga de productos</h1>
-        <form action="/cargar-producto" method="POST" enctype="multipart/form-data">
+        <form action="/products/creation1" method="POST" enctype="multipart/form-data">
           <div class>
             <label for="name">Nombre del producto:</label>
             <input type="text" id="name" name="name" required>
@@ -20,10 +26,10 @@
             <textarea id="description" name="description" rows="3" required></textarea>
           </div>
 
-          <div class>
+<!--           <div class>
             <label for="image">Imagen:</label>
             <input type="file" id="image" name="image" accept="image/*" required>
-          </div>
+          </div> -->
 
           <div class>
             <label for="category">Categoría:</label>
@@ -44,12 +50,14 @@
             <input type="number" id="price" name="price" min="0" step=".01" required>
           </div>
         
-          <button type="submit">Cargar producto</button>
+          <!-- <button type="submit">Cargar producto</button> -->
+
+          <input type="submit" value="Cargar">
         </form>
       </div>
     </main>
 
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>
 
   </body>
 
