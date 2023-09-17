@@ -15,7 +15,7 @@
 
 <main>
     <h2>BUSCAR POR CATEGORIAS</h2>
-            <section>
+<!--             <section>
                 <div class="categorias">
                     <h4>Viento</h4>
                     <img src="/images/saxofon.png" class="image-main">
@@ -32,7 +32,35 @@
                     <h4>Electricos</h4>
                     <img src="/images/teclado.png" class="image-main">
                 </div>
-            </section>
+            </section> -->
+            <% array.forEach(element => { %>
+            <section class="destacados">
+                <a href="/products/detail/<%= product.id %>">
+                <div class="categoria-destacado">
+                    <img src="/images/trompeta2.png" class="image-destacado">
+                    <p>Trompeta Bb Lincoln Winds Jytr1401 Dorada Estuche</p>
+                    <p>$ 274.000</p>
+                </div>
+                </a>
+
+<!--                 <div class="categoria-destacado">
+                    <img src="/images/bateria2.png" class="image-destacado">
+                    <p>Bateria Acústica Parquer 5 Cuerpos Negra Platillos Soporte</p>
+                    <p>$ 311.357</p>
+                </div>
+                <div class="categoria-destacado">
+                    <img src="/images/ukelele2.png" class="image-destacado">
+                    <p>Ukelele Tenor Electro Acustico Bamboo U-26 Sapele Con Eq</p>
+                    <p>$ 99.773</p>
+                </div>
+                <div class="categoria-destacado">
+                    <img src="/images/violin2.png" class="image-destacado">
+                    <p>Violin 1/4 Custom Parquer Estuche/arco/resina Vl925 Cuota</p>
+                    <p>$ 65.792</p>
+                </div> -->
+            </section>             
+            <% }) %>
+
 
     <h2>DESTACADOS</h2>                
             <section class="destacados">

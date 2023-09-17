@@ -20,9 +20,9 @@ app.use( express.static(path.resolve(__dirname, './public')));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
-app.use((req, res, netxt) => {
+/* app.use((req, res, netxt) => {
 	res.status(404).render('not-found')
-})
+}) */
 
 /* usando los recursos estaticos */
 app.use('/', mainRouter);

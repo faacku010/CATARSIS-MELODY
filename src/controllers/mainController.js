@@ -1,13 +1,15 @@
 /* requerimos path para pode renviar los archivos HTML */
 const path = require("path");
+const fs = require('fs');
+
+const productsFilePath = path.join(__dirname, '../data/productDataBase.json');
 
 /* creamos el objeto literal con los metodos a exportar */
 const mainController = {
 
-/* manejo del pedido get con ruta */
 index: (req, res) => {
-        /* comunicarse con el modelo, conseguir informacion */
-        res.render('products/index');
+	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    res.render("index", {products: products});
     }
 };
 

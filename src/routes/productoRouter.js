@@ -14,10 +14,10 @@ router.get('/detalle', productController.detalle);
 
 router.get('/create', productController.createProduct);
 
-router.post('/create', productController.create);
+/* router.post('/create', productController.create); */
 
 router.get('/edition', productController.edition);
 
-router.post('/edition', productController.edition);
+/* router.post('/edition', productController.edition); */
 
 module.exports = router;
