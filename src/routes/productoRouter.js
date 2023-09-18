@@ -10,7 +10,7 @@ const productController = require('../controllers/ProductController');
 
 router.get('/carrito', productController.carrito);
 
-router.get('/detalle', productController.detalle);
+router.get('/detalle/:id', productController.detalle);
 
 router.get('/create', productController.createProduct);
 

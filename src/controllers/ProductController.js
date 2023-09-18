@@ -38,10 +38,10 @@ let productController = {
         res.render('products/creation')
     },
     
-    edition: function (req, res) {
+     */
+edition: function (req, res) {
         res.render('products/productEdition')
-    } */
-
+    }
 };
 
 module.exports = productController;

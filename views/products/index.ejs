@@ -33,13 +33,13 @@
                     <img src="/images/teclado.png" class="image-main">
                 </div>
             </section> -->
-            <% array.forEach(element => { %>
+            <% product.forEach(product => { %>
             <section class="destacados">
-                <a href="/products/detail/<%= product.id %>">
+                <a href="">
                 <div class="categoria-destacado">
-                    <img src="/images/trompeta2.png" class="image-destacado">
-                    <p>Trompeta Bb Lincoln Winds Jytr1401 Dorada Estuche</p>
-                    <p>$ 274.000</p>
+                    <img src="/images/<%= product.image %>" class="image-destacado">
+                    <p><%= product.name %>></p>
+                    <p>$ <% product.price %></p>
                 </div>
                 </a>
 
