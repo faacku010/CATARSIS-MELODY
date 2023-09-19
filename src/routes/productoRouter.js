@@ -8,11 +8,11 @@ const productController = require('../controllers/ProductController');
     res.send('Bienvenidos al detalle del producto' + req.params.idProducto);
 }); */
 
-router.get('/carrito', productController.carrito);
+router.get('/carrito/:id/', productController.carrito);
 
-router.get('/detalle/:id', productController.detalle);
+/* router.get('/detalle/:id', productController.detalle);
 
-router.get('/create', productController.createProduct);
+router.get('/create', productController.createProduct); */
 
 /* router.post('/create', productController.create); */
 

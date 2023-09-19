@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require("path");
 
 
-const productsFilePath = path.join(__dirname, '../../views/data/ProductDataBase.json');
+const productsFilePath = path.join(__dirname, '../data/ProductDataBase.json');
 
 /* creamos el objeto literal con los metodos a exportar */
 const mainController = {

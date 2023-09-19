@@ -11,7 +11,7 @@ const mainRouter =require('./src/routes/mainRouter.js');
 const userRouter = require('./src/routes/userRouter.js');
 
 app.set('view engine', 'ejs');
-app.set('views', path.resolve(__dirname, 'views'));
+app.set('views', path.resolve(__dirname, 'src/views'));
 
 /* usando recursos estaticos */
 app.use( express.static(path.resolve(__dirname, './public')));
@@ -26,8 +26,8 @@ app.use(methodOverride('_method'));
 
 /* usando los recursos estaticos */
 app.use('/', mainRouter);
-app.use('/productos', productoRouter);
-app.use('/usuarios', userRouter);
+app.use('/products', productoRouter);
+app.use('/users', userRouter);
 
 
 /* ponemos a escuchar el servidor */

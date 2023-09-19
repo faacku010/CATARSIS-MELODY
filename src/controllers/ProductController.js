@@ -1,13 +1,23 @@
+const fs = require('fs');
 const path = require("path");
 
-const productsFilePath = path.join(__dirname, '../data/productDataBase.json');
+
+const productsFilePath = path.join(__dirname, '../data/ProductDataBase.json');
 
 
 
-let productController = {
-    carrito: function (req, res) {
-        res.render('products/carrito');
-    },
+const productController = {
+	carrito: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		const id = req.params.id;
+
+		const productToSend = products.find(product => {
+			return product.id == id
+		})
+		
+		res.render("products/carrito", {product: productToSend})
+	},
 
     detalle: function(req, res) {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -18,7 +28,7 @@ let productController = {
 			return product.id == id
         })
 
-        res.render("detalle", {product: productToSend})
+        res.render("products/detalle", {product: productToSend})
     },
 
     createProduct: function (req, res) {

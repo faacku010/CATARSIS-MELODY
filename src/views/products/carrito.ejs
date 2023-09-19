@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practica pa</title>
+    <title>carrito de compras</title>
     <link rel="stylesheet" href=" /css/carrito.css">
     <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
 </head>
@@ -15,10 +15,10 @@
     <div><h1>Carrito de compras</h1></div>
     <section>
         <article class="conteiner-article">
-            <img src="/images/guitarra-clasica-valencia.jpg" width="100px" class="article-image">  
+            <img src="/images/<%= product.image %>" width="100px" class="article-image">  
         <div class="item-conteiner">
             <div class="txt-article">
-                <h4>Guitarra Negra Clasica Valencia|Intermedio|Color Esfumado Satinado</h4> 
+                <h4><%= product.name %></h4> 
             </div>
             <div class="icon-article">
                 <i class="fa-solid fa-trash-can"></i> 
@@ -27,12 +27,12 @@
                 <input type="number"> 
             </div>
             <div class="price-article">
-                <h5>$ 250.500,00</h5> 
+                <h5>$<%= product.price %></h5> 
             </div>
         </div>
         </article>    
 
-        <article class="conteiner-article">
+<!--         <article class="conteiner-article">
             <img src="/images/bateria-pearl.jpg" width="100px" class="article-image">
         <div class="item-conteiner">
             <div class="txt-article">
@@ -67,7 +67,7 @@
             </div>  
             </div>
 
-        </article>
+        </article> -->
     </section>
 
     <section class="seccion-bot-main">
