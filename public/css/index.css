@@ -8,8 +8,7 @@
 }
 
 body {
-    width: 368px;
-    background-color: #7c3c986b;
+    background-color: #aaaf7dfb;
 }
 /* header */
 
@@ -108,35 +107,29 @@ main h2 {
     text-align: center;
 }
 
-.destacados, .ofertas {
-    display: none;
-}
 
 section {
     background-color: rgba(32, 148, 168, 0.774);
     padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.categorias {
-    width: 100%;
-    height: auto;
-    text-align: center;
+article {
+margin: 0px 10px;
+text-align: center;
+margin-bottom: 10px;
+padding: 5px;
 }
 
-.categorias h4 {
-    font-size: 25px;
+.image-destacado {
+    background-color: #5f6a6a5d;
+    width: 150px;
+    height: 150px;
+    padding: 5px;
 }
 
-.image-main {
-    width: 250px;
-    height: 250px;
-    background-color: #ffffff;
-
-}
-
-.categorias p {
-    padding: 10px;
-}
 
 /* footer */
 
@@ -175,10 +168,7 @@ section h2 {
 }
 
 @media (min-width: 768px) {
-    body {
-        width: 768px;
-    }
-    
+
     .top-bar-header {
         background-color: rgba(95, 158, 160, 0.377);
         justify-content: space-between;
@@ -238,7 +228,9 @@ section h2 {
 
     /* main */
     main {
-        background-color: #AEB6BF ;
+        background-color: #5c5c5c ;
+        margin-top: 10px;
+        margin: auto;
     }
 
     main h2 {
@@ -248,41 +240,27 @@ section h2 {
     section {
         margin: 5px auto;
         padding-bottom: 10px;
-        width: 75%;
+        width: 80%;
         display: flex;
-        flex-wrap: wrap;        
-    }
-
-    .categorias {
-        width: 50%;
-    }
-
-    .categorias h4 {
-       font-size: 25px;
-    }
-
-    .destacados, .ofertas {
-        display: flex;
-        flex-wrap: nowrap;
-        width: 98%;
+        flex-wrap: wrap;       
+        justify-content: space-between; 
+        flex-wrap: wrap;
         height: auto;
         border-radius: 10px;
     }
 
+    article {
+        margin: 10px;
+        background-color: rgba(137, 43, 226, 0.281);
+        text-align: center;
+    }
+    
     .image-destacado {
         width: 140px;
         height: 140px;
     }
 
-    .categoria-destacado, .categoria-oferta {
-        background-color: rgba(137, 43, 226, 0.281);
-        margin: 0px 4px;
-        padding: 3px 2px;
-        width: 25%;
-        text-align: center;
-    }
-
-    .categoria-destacado p, .categoria-oferta p {
+    article p {
         font-size: 15px;
     }
 
@@ -304,9 +282,6 @@ section h2 {
 
 
 @media (min-width: 1200px) {
-    body {
-        width: 1200px;
-    }
 
     header {
         width: 90%;
@@ -362,8 +337,7 @@ section h2 {
     /* main */
 
     section {
-        width: 100%;
-        flex-wrap: nowrap;
+        width: 90%;
     }
 
     .image-destacado {

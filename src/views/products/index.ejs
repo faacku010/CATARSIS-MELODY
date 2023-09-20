@@ -8,60 +8,26 @@
     <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
 </head>
 
-
 <body>
   
 <%- include('../partials/header.ejs') %>
 
 <main>
     <h2>BUSCAR POR CATEGORIAS</h2>
-<!--             <section>
-                <div class="categorias">
-                    <h4>Viento</h4>
-                    <img src="/images/saxofon.png" class="image-main">
-                </div>
-                <div class="categorias">
-                    <h4>Percusion</h4>
-                    <img src="/images/tambor.png" class="image-main">
-                </div>
-                <div class="categorias">
-                    <h4>Cuerda</h4>
-                    <img src="/images/guitarra-clasica-2.png" class="image-main">
-                </div>
-                <div class="categorias">
-                    <h4>Electricos</h4>
-                    <img src="/images/teclado.png" class="image-main">
-                </div>
-            </section> -->
-            <% product.forEach(product => { %>
-            <section class="destacados">
+
+    <section class="destacados">
+        <% product.forEach(product => { %>
+            <article>
                 <a href="/products/carrito/<%= product.id %>">
-                <div class="categoria-destacado">
                     <img src="/images/<%= product.image %>" class="image-destacado">
-                    <p><%= product.name %>></p>
-                    <p>$ <% product.price %></p>
-                </div>
+                    <p><%= product.name %></p>
+                    <p>$ <%= product.price %></p>
                 </a>
+            </article>
+        <% }) %>
+         </section>   
 
-<!--                 <div class="categoria-destacado">
-                    <img src="/images/bateria2.png" class="image-destacado">
-                    <p>Bateria Acústica Parquer 5 Cuerpos Negra Platillos Soporte</p>
-                    <p>$ 311.357</p>
-                </div>
-                <div class="categoria-destacado">
-                    <img src="/images/ukelele2.png" class="image-destacado">
-                    <p>Ukelele Tenor Electro Acustico Bamboo U-26 Sapele Con Eq</p>
-                    <p>$ 99.773</p>
-                </div>
-                <div class="categoria-destacado">
-                    <img src="/images/violin2.png" class="image-destacado">
-                    <p>Violin 1/4 Custom Parquer Estuche/arco/resina Vl925 Cuota</p>
-                    <p>$ 65.792</p>
-                </div> -->
-            </section>             
-            <% }) %>
-
-
+                
     <h2>DESTACADOS</h2>                
             <section class="destacados">
                 <div class="categoria-destacado">
