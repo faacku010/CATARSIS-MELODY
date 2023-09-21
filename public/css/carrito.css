@@ -5,20 +5,17 @@
 }
 
 body {
-    width: 368px;
-    background-color: #7c3c986b;
+    background: linear-gradient(#7c3c986b, rgb(58, 100, 162));
 }
 
 /* header */
 
 header {
-    width: 100%;
     background-color:#2121217e;
     height: auto;
 }
 
 .conteiner-header {
-    width: 100%;
     margin: 0;
     padding: 5px;
 }
@@ -26,7 +23,6 @@ header {
 .top-bar-header {
     display: flex;
     justify-content:flex-start;
-    width: 100%;
     height: auto;
     margin-bottom: 10px;
 }

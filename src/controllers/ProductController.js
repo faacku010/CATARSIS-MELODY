@@ -27,7 +27,6 @@ const productController = {
         const productToSend = products.find(product => {
 			return product.id == id
         })
-
         res.render("products/detalle", {product: productToSend})
     },
 

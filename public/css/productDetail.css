@@ -8,27 +8,19 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-body {
-    width: 368px;
-    /* background-color: #7c3c986b; */
-}
 
 header {
-    width: 100%;
     background-color:#2121217e;
     height: auto;
 }
 
 .conteiner-header {
-    width: 100%;
-    margin: 0;
     padding: 5px;
 }
 
 .top-bar-header {
     display: flex;
     justify-content:flex-start;
-    width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
@@ -58,7 +50,6 @@ header {
 }
 
 .bot-bar-header {
-    width: 100%;
     height: auto;
     display: flex;
 }
@@ -102,12 +93,12 @@ main{
 }
 .grande{
     display:flex;
-    flex-direction: row;
-    background-color: #ebebed;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    margin: 5px;
+    margin: auto;
     padding: 5px;
     background: linear-gradient(to top,rgb(58, 100, 162) , 20%, #7c3c986b);
+    width: 80%;
+    margin-top: 10px;
 }
 h2{
     font-size: medium;
@@ -117,29 +108,12 @@ h3{
     font-size:x-large;
     padding-top: 15px;
 }
-.img0{
-    display:flex;
-    flex-direction: column;
-    width: 8vw;
-    border-radius: 10px;
-    margin: 5px;
-}
-.img0 :hover{
-    border: solid  3px rgb(245, 75, 115);
-    transition: 0.5s ;
-}
-.mas{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    border-radius: 3px;
-    padding-bottom: 8px ;
-    cursor: pointer;
-}
+
 .img1{
     display:flex;
-    width: 30vw;
+    width: 20rem;
     border-radius: 10px;
-    margin-right: 10vw;
-    margin-left: 10vw;
+    margin: 2rem 5rem;
     color: white;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
@@ -149,7 +123,10 @@ h3{
     flex-direction: column;
     width: 100%;
     padding: 10px;
-    align-items: stretch;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.178);
+    border-radius: 10px;
+    margin: 15px 10px;
 }
 .desplegable select{
     display: flex;
@@ -297,10 +274,7 @@ section h2 {
 
 @media (min-width: 768px) {
 
-    body {
-        width: 768px;
-    }
-    
+  
     .top-bar-header {
         background-color: rgba(95, 158, 160, 0.377);
         justify-content: space-between;
@@ -375,9 +349,6 @@ section h2 {
 }
 
 @media (min-width: 1200px) {
-    body {
-        width: 1200px;
-    }
 
     header {
         width: 90%;

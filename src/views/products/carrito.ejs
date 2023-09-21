@@ -32,42 +32,6 @@
         </div>
         </article>    
 
-<!--         <article class="conteiner-article">
-            <img src="/images/bateria-pearl.jpg" width="100px" class="article-image">
-        <div class="item-conteiner">
-            <div class="txt-article">
-                <h4>Bateria Pearl Decade Maple 229 White Satin Pearl 4 Cuerpos</h4> 
-            </div>
-            <div class="icon-article">
-                <i class="fa-solid fa-trash-can"></i> 
-            </div>
-            <div class="button-article">
-                <input type="number"> 
-            </div>
-            <div class="price-article">
-                <h5>$ 250.500,00</h5> 
-            </div>
-        </div>
-        </article>
-        
-        <article class="conteiner-article">
-            <img src="/images/guitarra-negra-criolla-gracia-.jpg" width="100px" class="article-image">
-        <div class="item-conteiner">
-            <div class="txt-article">
-                <h4>Guitarra Negra Clasica Valencia|Intermedio|Color Esfumado Satinado</h4>  
-            </div>
-            <div class="icon-article">
-                <i class="fa-solid fa-trash-can"></i>
-            </div>
-            <div class="button-article">
-               <input type="number"> 
-            </div>
-            <div class="price-article">
-               <h5>$ 250.500,00</h5> 
-            </div>  
-            </div>
-
-        </article> -->
     </section>
 
     <section class="seccion-bot-main">
@@ -106,17 +70,17 @@
         <div class="create-form">
             <div class="subtotal-carrito">
                 <h5>subtotal del carrito</h5>
-                <p>$ 1.270.000</p>
+                <p>$ <%= product.price %></p>
             </div>
             <div class="subtotal-carrito">
                 <h5>Pedido Total</h5>
-                <p>$ 1.270.000</p>
+                <p>$ <%= product.price %></p>
             </div>
             <div class="caja-boton">
                 <button type="submit" class="boton-compra">Finalizar Compra</button>
             </div>
             <div>
-                <a href="http://localhost:3020/">Continuar Comprando</a>
+                <a href="/src/views/products/index.ejs">Continuar Comprando</a>
             </div>
         </div>            
     </div>

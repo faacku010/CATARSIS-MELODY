@@ -13,35 +13,27 @@
 
 <main>
     <div class="grande">
-        <!--Perspectivas y datos-->
-        <article class="perspectivas">
-             <div class="img0">
-                 <img class="mas" src="/images/guitarra-criolla-perfil.png" alt="Guitarra criolla perfil">
-                 <img class="mas" src="/images/guitarra-criolla-espalda.png" alt="Guitarra criolla espalda">
-                 <img class="mas" src="/images/guitarra-criolla-cuerdas.png" alt="Guitarra criolla cuerdas">
-                 <img class="mas" src="/images/guitarra-criolla-colores.png" alt="Guitarra criolla cuerdas">
-             </div>
-         </article>    
+ 
          <!--fotos-->
          <article>
-             <img class="img1" src="/images/guitarra-criolla-frente.png" alt="Guitarra criolla frente">
+             <img class="img1" src="/images/<%= product.image %>" alt="Guitarra criolla frente">
          </article>
          
          <!--info1-->
         <article class="cajaInfo">
             <div class="caja1">
-                <h1>Guitarra criolla clásica Gracia M1</h1>
+                <h1><%= product.name %></h1>
                 <h3>Precio:</h3>
-                <h3 class="p">$49.999</h3>
+                <h3 class="p">$<%= product.price %></h3>
              </div>
              <section class="uno">
-                 <div class="color">
+                <div class="color">
                      <h2>Seleccion de colores</h2>
                      <div class="form-group">
                          <input type="radio" name="color" id="negra">
-                         <label for="negra">Negra</label>
+                         <label for="negra"><%= product.colors %></label>
                      </div>
-                     <div class="form-group">
+<!--                      <div class="form-group">
                          <input type="radio" name="color" id="marron" checked>
                          <label for="marron">Marron</label>
                      </div>
@@ -49,7 +41,7 @@
                      <div class="form-group">
                          <input type="radio" name="color" id="roja">
                          <label for="roja">Roja</label>
-                     </div>
+                     </div> -->
                  </div>
 
                  <div class="desplegable">
@@ -80,13 +72,16 @@
                      <input type="number" value="1" min="1" max="10">
                  </div>
                  <div class="botones">
-                     <button class="comprar">
-                         <h2>COMPRAR AHORA</h2>
-                     </button>
+                     <form action="/products/carrito/<%= product.id %>" method="get">
+                        <button class="añadir"  type="submit">COMPRAR AHORA</button>
+                      </form>
+
                      <button class="añadir">
                          <h2>AÑADIR AL CARRITO</h2>
-                         
                      </button>
+
+
+
                  </div>                
              </section>
          </article>
@@ -96,10 +91,10 @@
      <!--Informacion-->
     <div class="informacion">
      <h4>Informacion del producto</h4>
-     <p class="infor">Guitarra de fina construcción con corte. Media Caja. Tapa de Pino Abeto macizo seleccionado con mosaicos. Aros y fondo de Caoba laminado. Finísima marquetería en aros y fondos. Cenefa central. Mástil de Cedro y terminación mate. Diapasón de Jacarandá. Trastes de Alpaca. Clavijero Lira Dorado. Lustre natural. Excelente terminación. Cuerdas SAVAREZ New Cristal Corum Rojo/Azul Media Tensión. CON ECULIAZADOR PROFESIONAL CON SALIDA CANON Y SISTEMA DE ECUALIZACIÓN AUTOMÁTICA</p></p>
+     <p class="infor"><%= product.description %></p>
      </div>
 
-     <section class="productosDestacados">
+     <!-- <section class="productosDestacados">
          <h4 >Productos destacados</h4>
          <div class="caja3-main">
              <div class="flecha">
@@ -145,7 +140,7 @@
              </div>
          </div>
 
-     </section>
+     </section> -->
  </main> 
  
  <%- include('../partials/footer.ejs') %>

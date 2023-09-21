@@ -109,7 +109,7 @@ main h2 {
 
 
 section {
-    background-color: rgba(32, 148, 168, 0.774);
+    background-color: rgba(124, 126, 0, 0.644);
     padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -170,7 +170,7 @@ section h2 {
 @media (min-width: 768px) {
 
     .top-bar-header {
-        background-color: rgba(95, 158, 160, 0.377);
+        background-color: rgba(153, 160, 95, 0.377);
         justify-content: space-between;
     }
 
@@ -251,8 +251,9 @@ section h2 {
 
     article {
         margin: 10px;
-        background-color: rgba(137, 43, 226, 0.281);
+        background-color: gray;
         text-align: center;
+        border-radius: 10px;
     }
     
     .image-destacado {
@@ -262,6 +263,8 @@ section h2 {
 
     article p {
         font-size: 15px;
+        background-color: #c4c4c4;
+        text-decoration: none;
     }
 
     /* footer */
@@ -341,7 +344,7 @@ section h2 {
     }
 
     .image-destacado {
-        background-color: #5f6a6a5d;
+        background-color: rgba(255, 255, 255, 0.507);
         width: 200px;
         height: 220px;
         margin: 5px auto;

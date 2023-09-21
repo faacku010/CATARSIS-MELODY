@@ -10,9 +10,9 @@ const productController = require('../controllers/ProductController');
 
 router.get('/carrito/:id/', productController.carrito);
 
-/* router.get('/detalle/:id', productController.detalle);
+router.get('/detalle/:id/', productController.detalle)
 
-router.get('/create', productController.createProduct); */
+router.get('/create', productController.createProduct);
 
 /* router.post('/create', productController.create); */
 

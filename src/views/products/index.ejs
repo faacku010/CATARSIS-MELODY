@@ -18,24 +18,34 @@
     <section class="destacados">
         <% product.forEach(product => { %>
             <article>
-                <a href="/products/carrito/<%= product.id %>">
+                <a href="/products/detalle/<%= product.id %>">
                     <img src="/images/<%= product.image %>" class="image-destacado">
-                    <p><%= product.name %></p>
-                    <p>$ <%= product.price %></p>
                 </a>
+                    <p><%= product.name %></p>
+                    <p>$ <%= product.price %></p>                
             </article>
         <% }) %>
          </section>   
 
                 
-    <h2>DESTACADOS</h2>                
+    <h2>DESTACADOS</h2>   
+    
+    <section>
+        <% for( let i = 0; i <= 5; i++ ) { %>
+            <article>
+                <img src="/images/<%= product[i].image%>" class="image-destacado">
+                <p><%= product[i].name%></p>
+                <p>$ <%= product[i].price %></p>                
+            </article>
+        <% } %>
+    </section>
+
+
+
+
             <section class="destacados">
-                <div class="categoria-destacado">
-                    <img src="/images/trompeta2.png" class="image-destacado">
-                    <p>Trompeta Bb Lincoln Winds Jytr1401 Dorada Estuche</p>
-                    <p>$ 274.000</p>
-                </div>
-                <div class="categoria-destacado">
+
+<!--                 <div class="categoria-destacado">
                     <img src="/images/bateria2.png" class="image-destacado">
                     <p>Bateria Acústica Parquer 5 Cuerpos Negra Platillos Soporte</p>
                     <p>$ 311.357</p>
@@ -50,7 +60,7 @@
                     <p>Violin 1/4 Custom Parquer Estuche/arco/resina Vl925 Cuota</p>
                     <p>$ 65.792</p>
                 </div>
-            </section>
+            </section> -->
 
     <h2>OFERTAS</h2>            
         <section class="ofertas">
