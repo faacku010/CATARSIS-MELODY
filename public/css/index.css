@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #aaaf7dfb;
+    background: linear-gradient(#6524afbd, rgb(58, 100, 162));
 }
 /* header */
 
@@ -97,8 +97,6 @@ header {
 /* MAIN */
 
 main {
-    width: 100%;
-    background-color:#5F6A6A;
     height: auto;
     padding-bottom: 10px;
 }
@@ -109,7 +107,8 @@ main h2 {
 
 
 section {
-    background-color: rgba(124, 126, 0, 0.644);
+    background-color: rgba(136, 136, 136, 0.644);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -123,8 +122,12 @@ margin-bottom: 10px;
 padding: 5px;
 }
 
+article:hover{
+    box-shadow: 0px 0px 10px rgb(26, 26, 26); 
+}
+
 .image-destacado {
-    background-color: #5f6a6a5d;
+    background-color: #5f6a6a;
     width: 150px;
     height: 150px;
     padding: 5px;
@@ -228,7 +231,6 @@ section h2 {
 
     /* main */
     main {
-        background-color: #5c5c5c ;
         margin-top: 10px;
         margin: auto;
     }

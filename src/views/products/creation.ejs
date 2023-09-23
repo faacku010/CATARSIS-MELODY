@@ -14,22 +14,20 @@
 
      <main>
       <div class="formulario">
-        <h1 class>Formulario de carga de productos</h1>
-        <form action="/products/creation1" method="POST" enctype="multipart/form-data">
+        <h1 class>Añadir Productos</h1>
+        <form action="/products/create/" method="POST">
           <div class>
             <label for="name">Nombre del producto:</label>
             <br>
-            <input class="item-form" type="text"  name="name" required>
+            <input class="item-form" type="text"  name="name" placeholder="Ej: violin">
           </div>
-
-
 
           <div class>
             <label for="category">Categoría:</label>
             <br>
-            <select class="item-form"  name="category" required>
+            <select class="item-form"  name="category">
               <option value="">Seleccionar</option>
-              <option value="Celulares">viento</option>
+              <option value="Accesorios">viento</option>
               <option value="Accesorios">Percusion</option>
               <option value="Accesorios">Electronico</option>
               <option value="Accesorios">Cuerdas</option>
@@ -63,8 +61,14 @@
           
           <!-- <button type="submit">Cargar producto</button> -->
 
-          <input id="button-cargar" type="submit" value="Cargar">
+          <input id="button-cargar" type="submit" value="Guardar">
         </form>
+
+        <a href="" class="action-button edit">EDITAR PRODUCTO</a>
+        <form action="" method="POST" style="display: inline-flex">
+          <button type="submit" class="action-button delete">ELIMINAR</button>
+        </form>
+
       </div>
     </main>
 

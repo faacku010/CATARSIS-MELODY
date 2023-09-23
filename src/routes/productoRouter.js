@@ -1,21 +1,26 @@
 const express = require('express');
-
 const router = express.Router();
+const multer = require('multer');
 
+
+/* controller  require */
 const productController = require('../controllers/ProductController');
 
-/* router.get('/:idProducto', function(req, res) {
-    res.send('Bienvenidos al detalle del producto' + req.params.idProducto);
-}); */
 
+/* enviar al carrito de cada producto */
 router.get('/carrito/:id/', productController.carrito);
 
+/* devolver un producto */
 router.get('/detalle/:id/', productController.detalle)
 
-router.get('/create', productController.createProduct);
+/* crear un producto */
+router.get('/create/', productController.createProduct);
+router.post('/create/', productController.processCreate);
 
-/* router.post('/create', productController.create); */
+/* eliminar un producto */
+router.delete('/delete/:id/', productController.destroy);
 
+/* editar un producto */
 router.get('/edition', productController.edition);
 
 /* router.post('/edition', productController.edition); */
