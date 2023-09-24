@@ -21,8 +21,7 @@ router.post('/create/', productController.processCreate);
 router.delete('/delete/:id/', productController.destroy);
 
 /* editar un producto */
-router.get('/edition', productController.edition);
-
-/* router.post('/edition', productController.edition); */
+router.get('/edition/:id/', productController.edition);
+router.put('/edition/:id/', productController.processEdition);
 
 module.exports = router;

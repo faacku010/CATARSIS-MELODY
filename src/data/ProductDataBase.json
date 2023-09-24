@@ -196,16 +196,8 @@
   "price": 200
  },
  {
-  "id": 18,
-  "category": "electronicos",
-  "name": "Bajo Eléctrico",
-  "description": "Instrumento de cuerda eléctrico con un sonido profundo.",
-  "image": "bajo-electrico.png",
-  "colors": [
-   "negro",
-   "rojo"
-  ],
-  "price": 300
+  "id": "18",
+  "image": "bajo-electrico.png"
  },
  {
   "id": 19,
@@ -241,5 +233,13 @@
    "madera"
   ],
   "price": 180
+ },
+ {
+  "id": 25,
+  "name": "bombo",
+  "price": "150.000",
+  "category": "Accesorios",
+  "description": "bombo de cuero curtido 2 ml de has",
+  "image": "default-image.png"
  }
 ]

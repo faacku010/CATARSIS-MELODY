@@ -58,7 +58,7 @@ const productController = {
 
 		// Redireccionar al usuario
 		// Generamos un pedido de tipo GET a la ruta /
-		res.redirect("/products/")
+		res.redirect("/")
 
     },
     
@@ -83,8 +83,48 @@ const productController = {
 	},
 
     edition: function (req, res) {
-        res.render('products/productEdition')
-    }
-};
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		let id = req.params.id;
+		let productToEdit = products.find(product =>{
+			return product.id == id	
+		});
+
+		res.render('products/productEdition', {productToEdit})
+	},
+
+	processEdition: (req, res) => {
+
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		let productToEdit = products.find(product => {
+			return req.params.id == product.id
+		});
+
+		let editedProduct = {
+			id: req.params.id,
+			name: req.body.name,
+			description: req.body.description,
+			price: req.body.price,
+			discount: req.body.discount,
+			image: productToEdit.image,
+			colors: req.body.colors,
+			category: req.body.category
+		}
+
+		// Buscando la posicion en el array del producto a editar
+		let indice = products.findIndex(product => {
+			return product.id == req.params.id
+		});
+
+		// Reemplazamos el producto por el editado
+		products[indice] = editedProduct;
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+		res.redirect("/");
+	}
+
+}
+
 
 module.exports = productController;
