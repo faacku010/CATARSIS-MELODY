@@ -15,7 +15,7 @@
      <main>
       <div class="formulario">
         <h1 class>Añadir Productos</h1>
-        <form action="/products/create/" method="POST">
+        <form action="/products/create/" method="POST" enctype="multipart/form-data">
           <div class>
             <label for="name">Nombre del producto:</label>
             <br>
@@ -38,7 +38,7 @@
           <div class>
             <label for="colors">Colores:</label>
             <br>
-            <input class="item-form" type="text"  name="colors" required >
+            <input class="item-form" type="text"  name="colors" required>
           </div>
 
           <div class>

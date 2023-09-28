@@ -241,5 +241,29 @@
   "category": "Accesorios",
   "description": "bombo de cuero curtido 2 ml de has",
   "image": "default-image.png"
+ },
+ {
+  "id": "26",
+  "image": "default-image.png"
+ },
+ {
+  "id": "261",
+  "name": "fonografo",
+  "price": "11111111111111111111",
+  "category": "Accesorios",
+  "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "image": "default-image.png"
+ },
+ {
+  "id": "2611",
+  "name": "fonografo",
+  "price": "1111111111111111111",
+  "category": "Accesorios",
+  "description": "qqqqqqqqqqqqqqqqqqqqq",
+  "image": "default-image.png"
+ },
+ {
+  "id": "26111",
+  "image": "product-1695824871482.png"
  }
 ]

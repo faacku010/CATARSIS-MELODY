@@ -4,6 +4,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const methodOverride = require('method-override');
+const session = require('express-session');
 
 /* importamos los distintos enrutadores */
 const productoRouter = require('./src/routes/productoRouter.js');
@@ -20,6 +21,13 @@ app.use( express.static(path.resolve(__dirname, './public')));
 app.use(express.urlencoded({ extended: false })); /* para poder recibir toda la data del body */
 app.use(express.json()); /* para poder recibir toda la data del body */
 app.use(methodOverride('_method')); /* para poder usar los metodos PUT y DELETE */
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true }
+  }))
+
 /* app.use((req, res, netxt) => {
 	res.status(404).render('not-found')
 }) */
