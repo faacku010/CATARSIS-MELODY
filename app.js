@@ -10,6 +10,7 @@ const session = require('express-session');
 const productoRouter = require('./src/routes/productoRouter.js');
 const userRouter = require('./src/routes/userRouter.js');
 const mainRouter = require('./src/routes/MainRouter.js');
+const productoRouter2 = require('./src/routes/productoRouter2.js');
 
 app.set('view engine', 'ejs'); /* define el motor que utilizamos en EJS */
 app.set('views', path.resolve(__dirname, 'src/views')); /* define la ubicacion de la carpeta */
@@ -36,6 +37,7 @@ app.use(session({
 app.use('/products', productoRouter);
 app.use('/users', userRouter);
 app.use('/', mainRouter);
+app.use('/productos2', productoRouter2);
 
 
 /* ponemos a escuchar el servidor */
