@@ -18,12 +18,6 @@ Equipo:
 
 -Orrabaliz Facundo Nicolas: Estudiante de nivel terciario en área de Emergencias Pre-hospitalarias, apasionado por la biología y el ecosistema que nos rodea, aficionado por la programación, me considero una persona la cual tiene habilidades cognitivas lo cual me permiten adoptar distintas metodologias para poder trabajar conjuntamente en equipo, de ser necesario lograr liderar el equipo, tratar de concebir un buen ambiente laboral, dos palabras "respeto y responsabilidad" fundamental, etc.
 
--Samuel Angel Salas: Soy estudiante de una secundaria pre-univesitaria, estudio la carrera de informática. No soy el mejor estudiante, pero soy bastante bueno en distintas áreas informáticas. Me encantan los gatos y la música, disfruto cualquier género (me encanta el cuarteto y la cumbia), pero tengo una afición por Michael Jackson. Lo que más hago es en pensar sobre mi futuro y sobre lo que voy a hacer, todavía no me decido es muy complicado. Saludos!!!
-
--Agustin Santiago Ponce: Soy estudiante de la tecnicatura de diseño de videojuegos, en la facultad de ingeniería. Voy a dar mi mejor esfuerzo para aprender todo lo enseñado en el curso. Me encantan los animales, la música y los videojuegos. Trabajo en un negocio familiar de venta de alimento de animales. Tengo pensado seguir adelante y aprender a programar como mi hermano. Saludos !!!
-
-New: -Rocio Belen Rodriguez: Hola!, tengo 17 años, estoy cursando el ultimo año de secundaria en la orientacion de Cs Sociales. Me gusta escuchar musica, ver series y los videojuegos. Mis pasatiempos; dibujar y hacer fandubs.Apasionada de la tecnologia y robotica, soy nueva en el area de la programacion y dispuesta a aprender algo nuevo cada dia en mi ambito academico y de formacion. Gracias!!!
-
 Sitios de referencia:
 
 https://www.famusic.com.ar/
