@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catarsis Melody</title>
+    <link href="/css/index.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+<%- include('../partials/header.ejs') %>
+
+<main>
+    <h2>BUSCAR POR CATEGORIAS</h2>
+
+    <ul>
+        <% for( let i = 0; i < productos.length; i++ ) { %>
+        <li>
+            <a href="/productos/detail/<%= productos[i].id %>"><%= productos[i].nombre %></a>
+            <img src="/images/<%= productos[i].imagen_producto %>" class="image-destacado">
+        </li>
+        <% } %>
+
+    </ul>
+
+</body>

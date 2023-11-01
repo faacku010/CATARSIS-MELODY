@@ -13,7 +13,6 @@ module.exports = (sequelize, dataTypes) => {
         },
         precio: {
             type: dataTypes.FLOAT
-
         },
         descripcion: {
             type: dataTypes.TEXT

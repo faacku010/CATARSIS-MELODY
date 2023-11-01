@@ -59,16 +59,13 @@
   "price": 500
  },
  {
-  "id": 6,
-  "category": "viento",
-  "name": "Trompa",
+  "id": "6",
+  "name": "Trompa EDITADO",
   "description": "Instrumento de viento de metal con forma cónica.",
-  "image": "trompa.png",
-  "colors": [
-   "dorado",
-   "plateado"
-  ],
-  "price": 400
+  "price": "400",
+  "image": "product-1698675005748.jpg",
+  "colors": "dorado,plateado",
+  "category": "viento"
  },
  {
   "id": 7,
@@ -95,15 +92,13 @@
   "price": 20
  },
  {
-  "id": 9,
-  "category": "percusion",
-  "name": "Platillos",
+  "id": "9",
+  "name": "Platillos EDITADO",
   "description": "Par de discos metálicos que producen sonido al chocar entre sí.",
+  "price": "50000",
   "image": "platillos2.png",
-  "colors": [
-   "plateado"
-  ],
-  "price": 50
+  "colors": "plateado",
+  "category": "percusion"
  },
  {
   "id": 10,
@@ -151,16 +146,13 @@
   "price": 180
  },
  {
-  "id": 14,
-  "category": "cuerda",
+  "id": "14",
   "name": "Violín",
   "description": "Instrumento de cuerda frotada con arco.",
+  "price": "250",
   "image": "violin2.png",
-  "colors": [
-   "marrón",
-   "negro"
-  ],
-  "price": 250
+  "colors": "marrón,negro",
+  "category": "cuerda"
  },
  {
   "id": 15,
@@ -235,39 +227,16 @@
   "price": 180
  },
  {
-  "id": 25,
-  "name": "bombo",
-  "price": "150.000",
-  "category": "Accesorios",
-  "description": "bombo de cuero curtido 2 ml de has",
-  "image": "default-image.png"
- },
- {
-  "id": "26",
-  "image": "default-image.png"
- },
- {
-  "id": "261",
-  "name": "fonografo",
-  "price": "11111111111111111111",
-  "category": "Accesorios",
-  "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-  "image": "default-image.png"
- },
- {
-  "id": "2611",
-  "name": "fonografo",
-  "price": "1111111111111111111",
-  "category": "Accesorios",
-  "description": "qqqqqqqqqqqqqqqqqqqqq",
-  "image": "default-image.png"
- },
- {
   "id": "26111",
   "image": "product-1695824871482.png"
  },
  {
   "id": "261111",
-  "image": "product-1696425731735.png"
+  "name": "guitarra electrica",
+  "description": "asdsadsadsadasdsa",
+  "price": "111111111111111",
+  "image": "product-1696425731735.png",
+  "colors": "",
+  "category": "Accesorios"
  }
 ]

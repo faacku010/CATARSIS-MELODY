@@ -21,19 +21,19 @@
     
                 <div class>
                     <label for="category">Categoría a cambiar:</label>
-                    <select class="item-form" name="category">
-                        <option value="">Seleccionar</option>
-                        <option value="Accesorios">viento</option>
-                        <option value="Accesorios">Percusion</option>
-                        <option value="Accesorios">Electronico</option>
-                        <option value="Accesorios">Cuerdas</option>
-                        <option value="Accesorios">Otro</option>
+                    <select class="item-form" name="category" value="<%= productToEdit.category %>">
+                        <option value="<%= productToEdit.category %>">Seleccionar</option>
+                        <option value="<%= productToEdit.category %>">viento</option>
+                        <option value="<%= productToEdit.category %>">Percusion</option>
+                        <option value="<%= productToEdit.category %>">Electronico</option>
+                        <option value="<%= productToEdit.category %>">Cuerdas</option>
+                        <option value="<%= productToEdit.category %>">Otro</option>
                     </select>
                 </div>
 
                 <div class>
                     <label for="colors">Nuevos Colores:</label>
-                    <input class="item-form" type="text" value="<%= productToEdit.color %>" name="colors">
+                    <input class="item-form" type="text" value="<%= productToEdit.colors %>" name="colors">
                 </div>
 
                 <div class>
@@ -53,14 +53,6 @@
                     <textarea id="Description" name="description"><%= productToEdit.description %></textarea>
                 </div>
     
-
-    
-
-    
-
-    
-
-            
                 <button type="submit" value="guardar">Guardar</button>
 
                 <div class="botones">

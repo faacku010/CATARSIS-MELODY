@@ -26,12 +26,20 @@
             <label for="category">Categoría:</label>
             <br>
             <select class="item-form"  name="category">
-              <option value="">Seleccionar</option>
-              <option value="Accesorios">viento</option>
-              <option value="Accesorios">Percusion</option>
-              <option value="Accesorios">Electronico</option>
-              <option value="Accesorios">Cuerdas</option>
-              <option value="Accesorios">Otro</option>
+            <option value="">Seleccionar categoria</option>  
+            <%
+              let category = ['Viento', 'Percusion', 'Electronico', 'Cuerdas', 'Otro'];
+            %>
+            <% for (const oneCategory of category) { %>
+                <option 
+                  value="<%= oneCategory %>" <% locals.oldData &&  (oneCategory === oldData.category) ? 'selected' : null %>> <%= oneCategory%></option>
+            <%  } %>
+<!--             
+            <option value="Accesorios">viento</option>
+            <option value="Accesorios">Percusion</option>
+            <option value="Accesorios">Electronico</option>
+            <option value="Accesorios">Cuerdas</option>
+            <option value="Accesorios">Otro</option> -->
             </select>
           </div>
 

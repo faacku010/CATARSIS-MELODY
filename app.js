@@ -29,7 +29,7 @@ app.use(session({
     cookie: { secure: true }
   }))
 
-/* app.use((req, res, netxt) => {
+/* app.use((req, res, next) => {
 	res.status(404).render('not-found')
 }) */
 
@@ -41,6 +41,6 @@ app.use('/productos2', productoRouter2);
 
 
 /* ponemos a escuchar el servidor */
-app.listen(3020,() => {
-    console.log('servidor corriendo en puerto https://localhost:3020');
+app.listen(3030,() => {
+    console.log('servidor corriendo en puerto http://localhost:3030/');
 });
