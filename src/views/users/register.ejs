@@ -16,13 +16,8 @@
 
         <section class="form-register">
 
-            <% if (locals.errors) { %>
-                <% for( let oneError in errors) { %>
-                    <p> <%= errors[oneError].msg %></p>
-                <% } %>
-            <% } %>
 
-            <form action="/users/register/" method="POST" enctype="multipart/form-data">
+            <form action="/users/register" method="POST" enctype="multipart/form-data">
                 <label for="firstName">Nombre</label>
                 <input 
                     class="controls <%= locals.errors && errors.firstName ? 'is-invalid' : null %>" 
@@ -64,20 +59,7 @@
                         <p> <%= errors.password.msg %> </p>
                     </div>
                 <% } %>
-
-                <label for="password">Repita Contraseña</label>
-                <input 
-                    class="controls <%= locals.errors && errors.password ? 'is-invalid' : null %>"
-                    type="password" 
-                    id="password" 
-                    name="password2"
-                    value="<%=locals.oldData ? oldData.password : null %>"
-                    >  
-                <% if (locals.errors && errors.password) { %>
-                    <div class="text-danger">
-                        <p> <%= errors.password.msg %> </p>
-                    </div>
-                <% } %>              
+            
 
                 <label for="email">Correo Electronico</label>
                 <input 
@@ -93,19 +75,20 @@
                     </div>
                 <% } %>
 
-                <label for="email">Repita Correo Electronico</label>
-                <input 
-                    class="controls <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-                    type="text" 
-                    id="email" 
-                    name="email2"
-                    value="<%=locals.oldData ? oldData.email : null %>"
+                <label for="image">añadir una imagen de perfil</label>
+                <input
+                    class="controls <%= locals.errors && errors.image ? 'is-invalid' : null %>"
+                    type="file" 
+                    id="image" 
+                    name="image"
+                    value="<%=locals.oldData ? oldData.image : null %>"
                     >
-                <% if (locals.errors && errors.email) { %>
+                <% if (locals.errors && errors.image) { %>
                     <div class="text-danger">
-                        <p> <%= errors.email.msg %> </p>
+                        <p> <%= errors.image.msg %> </p>
                     </div>
                 <% } %>
+
 
                 <input id="button-cargar" type="submit" value="Guardar">
 

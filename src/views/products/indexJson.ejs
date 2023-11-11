@@ -16,13 +16,13 @@
     <h2>BUSCAR POR CATEGORIAS</h2>
 
     <section class="destacados">
-        <% productos.forEach(productos => { %>
+        <% product.forEach(product => { %>
             <article>
-                <a href="/productos/detalle/<%= productos.id %>">
-                    <img src="/images/<%= productos.imagen_producto %>" class="image-destacado">
+                <a href="/products/detalle/<%= product.id %>">
+                    <img src="/images/<%= product.image %>" class="image-destacado">
                 </a>
-                    <p><%= productos.nombre %></p>
-                    <p>$ <%= productos.precio %></p>                
+                    <p><%= product.name %></p>
+                    <p>$ <%= product.price %></p>                
             </article>
         <% }) %>
          </section>   
@@ -33,10 +33,9 @@
     <section>
         <% for( let i = 0; i <= 5; i++ ) { %>
             <article>
-                <img src="/images/<%= productos[i].imagen_producto %>" class="image-destacado">
-                <p><%= productos[i].nombre%> - <%= productos[i].categorias.nombre %>
-                </p>
-                <p>$ <%= productos[i].precio %></p>                
+                <img src="/images/<%= product[i].image%>" class="image-destacado">
+                <p><%= product[i].name%></p>
+                <p>$ <%= product[i].price %></p>                
             </article>
         <% } %>
     </section>

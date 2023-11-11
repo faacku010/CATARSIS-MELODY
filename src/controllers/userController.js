@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
+const bcrypt = require('bcrypt');
 
 const usersFilePath = path.join(__dirname, '../data/UsersDataBase.json');
 
@@ -32,9 +33,9 @@ const userController = {
 			firstName: data.firstName,
 			lastName: data.lastName,
 			email: data.email,
-			password: data.password,
+			password: bcrypt.hashSync(data.password, 10),
 			category: data.category,
-			/* image: req.file ? req.file.filename : "default-image.png" */
+			image: req.file ? req.file.filename : "default-image.png"
 			}
 
 			// Guardarlo en el array
@@ -51,6 +52,41 @@ const userController = {
 
 	login: (req, res) => {
 		res.render('users/login');
+	},
+
+	processLogin: (req, res) => {
+		const errors = validationResult(req);
+
+		if (errors.isEmpty()) {
+		const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+		if (users == "") {
+			users = [];
+		} else {
+			users = JSON.parse(users);
+		}
+		let usuarioALoguearse
+
+		for (let i = 0; i < users.length; i++) {
+			if (users[i].email == req.body.email) {
+				if (bcrypt.compareSync(req.body.password, users[i].password)) {
+					let usuarioALoguearse = users[i];
+					break;
+				}
+			}
+		}
+			if (usuarioALoguearse == undefined) {
+				return res.render('users/login', {errors : [{msg: 'credenciales invalidas'}]});
+			}
+
+			req.session.usuarioLogueado = usuarioALoguearse;
+
+			if (req.body.recordame != undefined) {
+				res.cookie('recordame', usuarioALoguearse.email, {maxAge: 60000})
+			}
+
+		} else {
+			return res.render('users/login', {errors : errors.errors})
+		}
 	}
 };
 

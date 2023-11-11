@@ -1,40 +1,30 @@
 const express = require('express');
-const path = require ('path')
 const router = express.Router();
-const multer = require('multer');
 
-// ************ Multer config ************
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, '../../public/images'))
-    },
-    filename: function (req, file, cb) {
-        cb(null, "product-" + Date.now() + path.extname(file.originalname))
-    },
-});
+const productoDB = require('../controllers/productoController.js');
 
-const upload = multer({storage: storage});
+const upload = require('../middlewares/routes/multerMiddlewareP.js');
 
 
-/* controller  require */
-const productController = require('../controllers/ProductController');
-
-
-/* enviar al carrito de cada producto */
-router.get('/carrito/:id/', productController.carrito);
-
-/* devolver un producto */
-router.get('/detalle/:id/', productController.detalle)
+router.get('/', productoDB.listado);
 
 /* crear un producto */
-router.get('/create/', productController.createProduct);
-router.post('/create/',upload.single("image") , productController.processCreate);
+router.get('/create/', productoDB.createProduct);
+/* router.post('/create/',upload.single("image") , productoDB.processCreate); */
 
-/* eliminar un producto */
-router.delete('/delete/:id/', productController.destroy);
+
+/* devolver un producto */
+router.get('/detalle/:id/', productoDB.detalle)
+
+// carrito
+router.get('/carrito/:id/', productoDB.carrito);
 
 /* editar un producto */
-router.get('/edition/:id', productController.edition);
-router.put('/edition/:id', upload.single("image") , productController.processEdition);
+router.get('/edition/:id', upload.single("image") ,productoDB.edit);
+router.post('/edition/:id', upload.single("image"), productoDB.update);
+
+/* eliminar un producto */
+
+router.post('/delete/:id/', productoDB.delete);
 
 module.exports = router;

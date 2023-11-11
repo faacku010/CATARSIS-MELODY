@@ -1,3 +1,5 @@
+const { fn } = require("sequelize");
+
 module.exports = (sequelize, dataTypes) => {
     let alias = "Productos";
 
@@ -26,13 +28,21 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100)
 
         }
-    }
+    };
 
     let config = {
         tableName: "productos",
         timestamps: false
-    }
+    };
 
     const Producto = sequelize.define(alias, columnas, config);
+
+    Producto.associate = function (models) {
+        Producto.belongsTo(models.Categorias, {
+            as: "categorias",
+            foreignKey: "categoria_id"
+        })
+    };
+
     return Producto;
 }

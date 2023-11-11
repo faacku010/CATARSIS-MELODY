@@ -18,7 +18,7 @@
     <ul>
         <% for( let i = 0; i < productos.length; i++ ) { %>
         <li>
-            <a href="/productos/detail/<%= productos[i].id %>"><%= productos[i].nombre %></a>
+            <a href="/products/detalle/<%= productos[i].id %>"><%= productos[i].nombre %></a>
             <img src="/images/<%= productos[i].imagen_producto %>" class="image-destacado">
         </li>
         <% } %>

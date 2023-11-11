@@ -14,12 +14,27 @@
 
     <main>
         <section class="form-login">
+
+            <% if (locals.errors) { %>
+                <% for( let oneError in errors) { %>
+                    <p> <%= errors[oneError].msg %></p>
+                <% } %>
+            <% } %>
+            <form action="/users/login/" method="POST">
+                <label for="Email"></label>
+                <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su correo ">
+                    
+                <label for="password"></label>
+                <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
+
+                <label for="recordame"></label>
+                <input type="checkbox" name="recordame">
+
+                <p>Esta de acuerdo con  <a href="#">Terminos y Condiciones</a></p>
+                <input class="botons" type="submit" value="Registrar">
+            </form>
             <h4>login</h4>
-            <input class="controls" type="text" name="nombre del usuario" id="nombre del usuario" placeholder="Ingrese su Nombre de usuario">
-            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo electronico">
-            <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
-            <p>Esta de acuerdo con  <a href="#">Terminos y Condiciones</a></p>
-        <input class="botons" type="submit" value="Registrar">
+
         </section>        
     </main>
 

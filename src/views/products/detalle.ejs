@@ -16,22 +16,22 @@
  
          <!--fotos-->
          <article>
-             <img class="img1" src="/images/<%= product.image %>" alt="Guitarra criolla frente">
+             <img class="img1" src="/images/<%= producto.imagen_producto %>" alt="Guitarra criolla frente">
          </article>
          
          <!--info1-->
         <article class="cajaInfo">
             <div class="caja1">
-                <h1><%= product.name %></h1>
+                <h1><%= producto.nombre %></h1>
                 <h3>Precio:</h3>
-                <h3 class="p">$<%= product.price %></h3>
+                <h3 class="p">$<%= producto.precio %></h3>
              </div>
              <section class="uno">
                 <div class="color">
                      <h2>Seleccion de colores</h2>
                      <div class="form-group">
                          <input type="radio" name="color" id="negra">
-                         <label for="negra"><%= product.colors %></label>
+                         <label for="negra"><%= producto.colors %></label>
                      </div>
 <!--                      <div class="form-group">
                          <input type="radio" name="color" id="marron" checked>
@@ -72,7 +72,7 @@
                      <input type="number" value="1" min="1" max="10">
                  </div>
                  <div class="botones">
-                     <form action="/products/carrito/<%= product.id %>" method="get">
+                     <form action="/productos/carrito/<%= producto.id %>" method="get">
                         <button class="añadir"  type="submit">COMPRAR AHORA</button>
                       </form>
 
@@ -80,8 +80,8 @@
                          <h2>AÑADIR AL CARRITO</h2>
                      </button>
 
-                     <a href="/products/edition/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-                     <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                     <a href="/productos/edition/<%= producto.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+                     <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                        <button type="submit" class="action-button delete">ELIMINAR</button>
                      </form>
 
@@ -95,56 +95,9 @@
      <!--Informacion-->
     <div class="informacion">
      <h4>Informacion del producto</h4>
-     <p class="infor"><%= product.description %></p>
+     <p class="infor"><%= producto.description %></p>
      </div>
 
-     <!-- <section class="productosDestacados">
-         <h4 >Productos destacados</h4>
-         <div class="caja3-main">
-             <div class="flecha">
-                 <i class="fa-solid fa-chevron-left"></i>
-             </div>
-
-             <div class="card-list-products">
-                 <div class="card">
-                     <img class="img2" src="/images/trompeta-perfil.png"
-                         alt=" trompeta-2">
-                     <div class="cardPrice">
-                         <h4 class="h41">Trompeta Bb Lincoln Winds Jytr1401 Dorada</h4>
-                         <p class="p1">Precio:  $274.000</p>
-                     </div>
-                 </div>
-                 <div class="card">
-                     <img class="img2" src="/images/bateria-4.png"
-                         alt=" bateria-parquer">
-                     <div class="cardPrice">
-                         <h4 class="h41">Bateria Acústica Parquer 5 Cuerpos Negra Platillos Soporte</h4>
-                         <p class="p1">Precio: $311.357</p>
-                     </div>
-                 </div>
-                 <div class="card">
-                     <img class="img2" src="/images/ukelele.jpg"
-                         alt="ukelele">
-                     <div class="cardPrice">
-                         <h4 class="h41">Ukelele Tenor Electro Acustico Bamboo U-26 Sapele Con Eq</h4>
-                         <p class="p1">Precio: $99.773</p>
-                     </div>
-                 </div>
-                 <div class="card">
-                     <img class="img2" src="/images/violin-frente.png"
-                         alt="Violin">
-                     <div class="cardPrice">
-                         <h4 class="h41">Violin 1/4 Custom Parquer Estuche/arco/resina Vl925 Cuota</h4>
-                         <p class="p1">Precio: $65.792</p>
-                     </div>
-                 </div>
-             </div>
-             <div class="flecha">
-                 <i class="fa-solid fa-chevron-right"></i>
-             </div>
-         </div>
-
-     </section> -->
  </main> 
  
  <%- include('../partials/footer.ejs') %>
