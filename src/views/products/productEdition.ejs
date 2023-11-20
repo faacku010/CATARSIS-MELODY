@@ -15,29 +15,33 @@
             <h1 class>Editar producto</h1>
             <form action="/productos/edition/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class>
-                    <label for="name">Nuevo nombre del producto:</label>
+                    <label for="nombre">Nuevo nombre del producto:</label>
                     <input 
                         class="item-form" 
                         type="text" 
-                        name="name" value="<%= producto.nombre %>">
+                        name="nombre" value="<%= producto.nombre %>">
                 </div class>
     
                 <div class>
-                    <label for="category">Categoría:</label>
+                    <label for="categoria_id">Categoría:</label>
                     <br>
-                    <select 
-                        class="item-form"  
-                        name="category">
-                    <option value="">Seleccionar categoria</option>  
-                    <%
-                      let category = ['Viento', 'Percusion', 'Electronico', 'Cuerdas', 'Otro'];
-                    %>
-                    <% for (const oneCategory of category) { %>
+                    <select class="item-form"  name="categoria_id">
+                      <option value="">Seleccionar categoria</option>  
+                      <% categorias.forEach(categoria => { %>
                         <option 
-                          value="<%= oneCategory %>" <% locals.oldData &&  (oneCategory === oldData.category) ? 'selected' : null %>> <%= oneCategory%></option>
-                    <%  } %>
+                        value="<%= categoria.id %>"
+                        <% if (categoria.id == producto.categoria_id) { %>
+                            selected
+                        <% } %>
+                        >
+                            <%= categoria.nombre %>
+
+                        </option>
+                      <% }); %>
                     </select>
                   </div>
+
+
 
                 <div class>
                     <label for="colors">Nuevos Colores:</label>

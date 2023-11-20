@@ -9,21 +9,32 @@ const productoControladorDB = {
         .then( (productos) =>{
             res.render('products/index', {productos});
         })
+        return res.json(productos);
+    },
+
+    createForm: (req, res) => {
+        db.Categorias.findAll()
+        .then ( (categorias) => {
+            res.render('products/creation', {categorias : categorias})    
+        })
+        
     },
 
     createProduct: function (req, res) {
         db.Productos.create({
             nombre: req.body.nombre,
             precio: req.body.precio,
+            categoria_id: req.body.categoria_id,
             descripcion: req.body.descripcion,
             descuento: req.body.descuento,
             imagen_producto: req.body.imagen_producto  
         })
-    	res.render('products/creation');
+    	res.redirect('/productos/');
     },
 
     detalle: function (req, res) {
-        db.Productos.findByPk(req.params.id)
+        db.Productos.findByPk(req.params.id,
+        {include: [{association: "categorias"}]})
         .then((producto) => {
             /* console.log(producto); */
             res.render('products/detalle', {producto})  
@@ -40,17 +51,24 @@ const productoControladorDB = {
 
 
     edit: function (req, res) {
-        db.Productos.findByPk(req.params.id)
-            .then(function(productoDB) {
-                res.render('products/productEdition', 
-                {producto : productoDB})
-            })
+        let pedidoProducto = db.Productos.findByPk(req.params.id);
+        let pedidoCategoria = db.Categorias.findAll();
+
+        Promise.all([pedidoProducto, pedidoCategoria])
+
+        .then(([productoDB, categoriaDB]) => {
+            console.log(productoDB);
+            console.log(categoriaDB);
+            res.render('products/productEdition', { producto : productoDB, categorias : categoriaDB })
+        })
+
     },
 
     update: function (req, res) {
         db.Productos.update({
             nombre: req.body.nombre,
             precio: req.body.precio,
+            categoria_id: req.body.categoria_id,
             descripcion: req.body.descripcion,
             descuento: req.body.descuento,
             imagen_producto: req.body.imagen_producto  

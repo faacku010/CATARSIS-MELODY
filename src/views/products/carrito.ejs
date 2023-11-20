@@ -15,10 +15,10 @@
     <div><h1>Carrito de compras</h1></div>
     <section>
         <article class="conteiner-article">
-            <img src="/images/<%= product.image %>" width="100px" class="article-image">  
+            <img src="/images/<%= producto.imagen_producto %>" width="100px" class="article-image">  
         <div class="item-conteiner">
             <div class="txt-article">
-                <h4><%= product.name %></h4> 
+                <h4><%= producto.nombre %></h4> 
             </div>
             <div class="icon-article">
                 <i class="fa-solid fa-trash-can"></i> 
@@ -27,7 +27,7 @@
                 <input type="number"> 
             </div>
             <div class="price-article">
-                <h5>$<%= product.price %></h5> 
+                <h5>$<%= producto.precio %></h5> 
             </div>
         </div>
         </article>    
@@ -70,11 +70,11 @@
         <div class="create-form">
             <div class="subtotal-carrito">
                 <h5>subtotal del carrito</h5>
-                <p>$ <%= product.price %></p>
+                <p>$ <%= producto.precio %></p>
             </div>
             <div class="subtotal-carrito">
                 <h5>Pedido Total</h5>
-                <p>$ <%= product.price %></p>
+                <p>$ <%= producto.precio %></p>
             </div>
             <div class="caja-boton">
                 <button type="submit" class="boton-compra">Finalizar Compra</button>
