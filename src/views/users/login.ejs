@@ -15,23 +15,52 @@
     <main>
         <section class="form-login">
 
-            <% if (locals.errors) { %>
-                <% for( let oneError in errors) { %>
-                    <p> <%= errors[oneError].msg %></p>
-                <% } %>
-            <% } %>
-            <form action="/users/login/" method="POST">
-                <label for="Email"></label>
-                <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su correo ">
-                    
-                <label for="password"></label>
-                <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
+            <form action="/usuariosDB/login/" method="POST">
+                <label for="correo"></label>
+                <div>
+                    <input 
+                        class="controls" 
+                        type="email" 
+                        name="correo" 
+                        id="email" 
+                        placeholder="Ingrese su correo " required>
+
+                        <% if (locals.errors && errors.correo) { %>
+                            <div class="text-danger">
+                                <%= errors.correo.msg %>
+                            </div>
+                            <% } %>
+                </div>
+
+                <div>
+                    <label for="contrasenia"></label>
+                    <input 
+                        class="controls" 
+                        type="password" 
+                        name="contrasenia" 
+                        id="password" 
+                        placeholder="Ingrese su Contraseña">
+                        <% if (locals.errors && errors.contrasenia) { %>
+                            <div>
+                                <%= errors.contrasenia.msg %>
+                            </div>
+                            <% } %>                    
+                </div>    
+
+
 
                 <label for="recordame"></label>
-                <input type="checkbox" name="recordame">
+                <input 
+                    type="checkbox" 
+                    name="recordame"> recordar usuario
+    
+                <button               
+                    class="botons" 
+                    type="submit" 
+                    value="">
+                    loguearme
+                </button> 
 
-                <p>Esta de acuerdo con  <a href="#">Terminos y Condiciones</a></p>
-                <input class="botons" type="submit" value="Registrar">
             </form>
             <h4>login</h4>
 

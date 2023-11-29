@@ -10,7 +10,7 @@ router.get('/', productoDB.listado);
 
 /* crear un producto */
 router.get('/create/', productoDB.createForm);
-router.post('/create/', upload.single("image") ,productoDB.createProduct);
+router.post('/create/', upload.single("imagen_producto") ,productoDB.createProduct);
 
 
 

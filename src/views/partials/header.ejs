@@ -11,14 +11,25 @@
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>            
     </div>
+    <div class="banner">
+        <img src="/images/banner.png">
+    </div>
     <div class="bot-bar-header">
             <div class="barra-busqueda">
                 <input type="text" placeholder="¿Que estas buscando?">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="sesion-register">
-                <a href="/users/login">iniciar sesion</a>
-                <a href="/users/register">registro</a>
+                <% if (locals.isLogged) { %>
+                    <a href="/usuariosDB/perfil">
+                        <img src="/images/users/default-image.png">
+                        <%= locals.usuarioLogueado.nombre %>
+                        <a class="dropdown-item" href="/usuariosDB/logout">Logout</a>
+                    </a>                 
+                <% } else { %>
+                <a href="/usuariosDB/login">iniciar sesion</a>
+                <a href="/usuariosDB/create">registro</a>
+                <% } %>
             </div>
     </div>
 </header>

@@ -2,11 +2,12 @@ const path = require('path');
 const { body } = require('express-validator');
 
 module.exports = [
-        body('firstName').notEmpty().withMessage('debe completar el campo nombre'),
-        body('lastName').notEmpty().withMessage('debe completar el campo apellido'),
-        body('password').notEmpty().withMessage('debe completar el campo contraseña'),
-        body('email').isEmail().withMessage('debe completar el campo email'),
-        body("image")
+        body('nombre').notEmpty().withMessage('debe completar el campo nombre'),
+        body('apellido').notEmpty().withMessage('debe completar el campo apellido'),
+        body('contrasenia').notEmpty().withMessage('debe completar el campo contraseña'),
+        body('correo').notEmpty().withMessage('debe completar el campo email').bail()
+        .isEmail().withMessage('debes escribir un formato de correo valido'),
+        body("imagen_perfil")
         .custom((value, {req}) => {
     
             let file = req.file;

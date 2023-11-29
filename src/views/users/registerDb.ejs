@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/register.css">
+  <title>Formulario Registro</title>
+</head>
+
+<body>
+
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+
+        <section class="form-register">
+
+
+            <form action="/usuariosDB/create" method="POST" enctype="multipart/form-data" class="form">
+                
+                <label for="nombre">nombre</label>
+                <input
+                    class="controls" 
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    value="<%=locals.oldData ? oldData.nombre : null %>">
+                
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div class="text-danger">
+                            <p> <%= errors.nombre.msg %> </p>
+                        </div>
+                    <% } %>
+
+                <label for="apellido">apellido</label>
+                <input
+                    class="controls"  
+                    type="text"
+                    name="apellido"
+                    id="apellido"
+                    value="<%=locals.oldData ? oldData.apellido : null %>">
+
+                    <% if (locals.errors && errors.apellido) { %>
+                        <div class="text-danger">
+                            <p> <%= errors.apellido.msg %> </p>
+                        </div>
+                    <% } %>
+
+                <label for="correo">correo electronico</label>
+                <input
+                    class="controls"  
+                    type="email"
+                    name="correo"
+                    id="correo"
+                    value="<%=locals.oldData ? oldData.correo : null %>">
+
+                    <% if (locals.errors && errors.correo) { %>
+                        <div class="text-danger">
+                            <p> <%= errors.correo.msg %> </p>
+                        </div>
+                    <% } %>
+                
+                <label for="contrasenia">contraseña</label>
+                <input 
+                    type="password"
+                    name="contrasenia"
+                    class="controls"
+                    id="contrasenia"
+                    value="">
+
+                    <% if (locals.errors && errors.contrasenia) { %>
+                        <div class="text-danger">
+                            <p> <%= errors.contrasenia.msg %> </p>
+                        </div>
+                    <% } %>
+
+                <label for="imagen_perfil">seleccionar una imagen de perfil</label> 
+                <input 
+                    type="file"
+                    name="imagen_perfil"
+                    class="controls"
+                    id="imagen_perfil"
+                    value="<%=locals.oldData ? oldData.imagen_perfil : null %>">
+
+                    <% if (locals.errors && errors.imagen_perfil) { %>
+                        <div class="text-danger">
+                            <p> <%= errors.imagen_perfil.msg %> </p>
+                        </div>
+                    <% } %>
+    
+                <input id="button-cargar" type="submit" value="Guardar">
+
+            </form>
+        </section>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+
+    <script src="/js/script.js"></script>
+</body>

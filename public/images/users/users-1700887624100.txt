@@ -1,0 +1,25 @@
+ 7 apartados:
+foto- nombre - apellido - impulsor de marca
+skills:  Node Js
+● React
+● Express
+● HTML
+● CSS
+● Javascript
+● MySQL
+● Creación y consumo de APIs
+● Git
+● Metodologías Ágiles - Scrum
+● OOP
+● Patrón de arquitectura MVC
+● Postman
+● Sequelize
+● VSCode
+habilidades blandas
+datos de contacto: fecha nac, localidad, nacionalidad, telefono, email linkedin, github.
+- 
+experiencia profesional: programador web Full stack digital house mar 2023 / ago 2023 - aclarar tareas realizadas, proyectos integradores
+otras experiencias:
+sobre mi o perfil: formacion, aspiraciones, cualidad o fortalezas / preguntas quien sos, que haces, a que mercado te dirigis, que resultados prometes, porque deben elegirte
+formacion academica aqui va digital house / colocar la fecha asi 2014 -2013
+otros conocimientos

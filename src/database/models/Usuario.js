@@ -9,21 +9,30 @@ module.exports = (sequelize, dataTypes) => {
         },
         nombre: {
             type: dataTypes.STRING(100),
-            null: true
+            allowNull: false
         },
         apellido: {
-            type: dataTypes.STRING(100)
+            type: dataTypes.STRING(100),
+            allowNull: false
         },
         correo: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            allowNull: false,
+            unique: true,
+
         },
         contrasenia: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING(200),
+            allowNull: false
 
         },
         imagen_perfil: {
-            type: dataTypes.STRING(100)
+            type: dataTypes.STRING(100),
+            allowNull: true
 
+        },
+        ocupacion_id: {
+        type: dataTypes.INTEGER,
         }
     }
 

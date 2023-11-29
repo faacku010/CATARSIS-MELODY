@@ -293,6 +293,12 @@ section h2 {
         margin: auto;
     }
 
+    .banner img {
+        width: 100%;
+        height: 250px;
+        margin: 0;
+    }
+
     .logo {
         width: 40%;
         height: auto;
@@ -304,31 +310,35 @@ section h2 {
         height: 70px;
     }
 
+    .bot-bar-header{
+        height: 3rem;
+    }
+
     .barra-busqueda {
         width: 60%;
         height: 80px;
+        align-self: center;
     }
 
     .barra-busqueda input {
         width: 70%;
-        height: 60px;
-        font-size: 25px;
+        height: 40px;
+        font-size: 20px;
         text-align: center;
         border-radius: 10px;
-        margin-left: 10px;
-        margin-right: 2px;
     }
     
     .barra-busqueda i {
-        font-size: 30px;
-        width: 60px;
-        height: 60px;
+        font-size: 18px;
+        width: 40px;
+        text-align: center;
+        height: 40px;
         margin: 0px 4px;
         padding: 13px 0px;
     }
     
     .sesion-register {
-        font-size: 30px;
+        font-size: 20px;
     }
     
     .sesion-register a {

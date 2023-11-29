@@ -9,7 +9,7 @@ const productoControladorDB = {
         .then( (productos) =>{
             res.render('products/index', {productos});
         })
-        return res.json(productos);
+        /* return res.json(productos); */
     },
 
     createForm: (req, res) => {
@@ -27,7 +27,7 @@ const productoControladorDB = {
             categoria_id: req.body.categoria_id,
             descripcion: req.body.descripcion,
             descuento: req.body.descuento,
-            imagen_producto: req.body.imagen_producto  
+            imagen_producto: req.file.filename  
         })
     	res.redirect('/productos/');
     },
