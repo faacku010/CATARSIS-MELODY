@@ -8,8 +8,6 @@
 body {
     background: linear-gradient(#6524afbd, rgb(58, 100, 162));
 }
-/* header */
-
 .navbar {
     background-color: rgba(163, 163, 163, 0.5);
     display: flex;
@@ -63,71 +61,34 @@ body {
  .close span:nth-child(3){
      transform: rotate(-45deg) translate(-5px, 1px);
  }
- .open{ transform: translateX(0) !important}
+ .open{ transform: translateX(0) /* !important */}
 
 .banner {
     display: none;
 }
 
-/* MAIN */
+/* main */
 
-main h2 {
-    text-align: center;
-}
-
-.destacados {
-    background-color: rgba(136, 136, 136, 0.644);
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    padding-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-article {
-    width: 70%;
-    background-color: rgb(228, 253, 3);
-    margin: auto;
-    text-align: center;
-    margin-bottom: 40px;
+.contenedor-perfil {
+    background-color: rgba(255, 255, 255, 0.37);
+    width: 98%;
+    margin: 15px auto;
+    border-radius: 10px;
     padding: 5px;
-    border-radius: 15px;
 }
 
-article:hover{
-    box-shadow: 0px 0px 10px rgb(26, 26, 26); 
+.contenedor-perfil h2 {
+    font-size: 18px;
+    font-family: Tahoma, sans-serif;
 }
 
-article p {
-    margin: auto;
-    padding: 5px;
-    background-color: rgba(136, 136, 136, 0.774);
-    width: 90%;
-    border-radius: 5px;
-    text-align: start;
+.contenedor-perfil img {
+    border-radius: 80px;
+    width: 150px;
+    height: auto;
 }
 
-.image-destacado {
-    background-color: #90979763;
-    width: 220px;
-    height: 230px;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-#nombre {
-    font-size: 15px;
-    margin-bottom: 5px;
-    font-weight: 550;
-}
-#precio {
-    font-size: 20px;
-    font-weight: 800;
-
-}
-
-/* footer */
-
+ /*footer*/
 footer section {
     border-radius: 10px;
     background-color: #2121217e;
@@ -139,9 +100,11 @@ footer section {
     text-align: center;
     justify-content: center;
 }
+  
 section h2 {
     margin-bottom: 10px;
 }
+  
 .redes ul {
     margin: auto;
     height: auto;
@@ -149,21 +112,23 @@ section h2 {
     display: flex;
     justify-content: space-around;
     text-decoration: none;
-
 }
+  
 .redes a {
     font-size: 30px;
 }
+  
 .section li {
     text-decoration: none;
 }
+  
+.text-danger {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.144);
+    margin-bottom: 10px;
+}
 
 @media (min-width: 768px) {
-
-    /* header */
-/*     header {
-        background-color: aqua;
-    } */
 
     .nav_logo {
         margin: 10px 20px;
@@ -215,97 +180,96 @@ section h2 {
     .banner img {
         width: 100%;
     }
-
-    /* main */
-
-    main {
-        margin: auto;
-    }
-
-    main h2 {
-        font-size: 25px;
-    }
-
-    .destacados {
-        background-color: gray;
-        width: 95%;
-        margin: 5px auto;
-        border-radius: 10px;
-    }
-
-    article {
-        width: 40%;
-        height: auto;
-        margin: 20px 35px;
-        background-color: rgba(138, 129, 0, 0.774);
-        border-radius: 10px;
-    }
-    
-    .image-destacado {
-        width: 250px;
-        height: 250px;
-    }
-
-    article p {
-        font-size: 15px;
-        background-color: #c4c4c481;
-        text-decoration: none;
-    }
-
-    /* footer */
-
+  
+  /* footer */
+  
     footer {
-        width: 80%;
-        display: flex;
-        flex-wrap: wrap;
-        margin: auto;
-        }
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+    }
+      
     footer section {
-        width: 30%;
-        height: 160px;
-        }
+      width: 30%;
+      height: 160px;
+    }
 }
 
-
 @media (min-width: 1200px) {
-
     /* header */
+body {
+    width: auto;
+}
 
-    /* main */
+header {
+    width: 98%;
+    margin: auto;
+}
 
-    section {
-        width: 90%;
-    }
+.logo {
+    width: 40%;
+    height: auto;
+}
 
-    article {
-        width: 25%;
-    }
+.burger-menu, .burger-carrito {
+    width: 70px;
+    font-size: 40px;
+    height: 70px;
+}
 
-    .image-destacado {
-        background-color: rgba(255, 255, 255, 0.507);
-        width: 200px;
-        height: 220px;
-        margin: 5px auto;
-    }
+.barra-busqueda {
+    width: 60%;
+    height: 80px;
+}
 
-    /* footer */
+.barra-busqueda input {
+    width: 70%;
+    height: 60px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 2px;
+}
 
-    footer {
-        width: 100%;
-        flex-wrap: nowrap;
-        margin-top: 30px 0px;
-        border-top: solid 2px #0000006c;
-        padding: 30px 0px;
-    }
+.barra-busqueda i {
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    margin: 0px 4px;
+    padding: 13px 0px;
+}
 
-    footer section {
-        flex-wrap: wrap;
-        margin: 0px 10px;
-        height: auto;
-        padding: 0px 5px;
-    }
+.sesion-register {
+    font-size: 30px;
+}
 
-    .footer-items ul, .footer-items p {
-        font-size: 19px;
-    }
+.sesion-register a {
+    text-decoration: none;
+    color: black;
+    margin-right: 12px;
+    margin-bottom: 5px;
+    align-self: center;
+}
+
+/* footer */
+
+  footer {
+    width: 100%;
+    flex-wrap: nowrap;
+    margin-top: 30px 0px;
+    border-top: solid 2px #0000006c;
+    padding: 30px 0px;
+}
+
+footer section {
+    margin: 0px 10px;
+    height: auto;
+    padding: 0px 5px;
+}
+
+.footer-items ul, .footer-items p {
+    font-size: 19px;
+}
 }

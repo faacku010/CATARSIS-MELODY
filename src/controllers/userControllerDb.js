@@ -10,7 +10,7 @@ const usuarioControladorDB = {
     },
 
     Registro: (req, res) => {
-        const resultValidation = validationResult(req);
+        let resultValidation = validationResult(req);
 
         db.Usuarios.findOne({
             where: {
@@ -20,8 +20,8 @@ const usuarioControladorDB = {
 
         })
         .then(usuarioRegistrado => {
-            console.log('usuarioregistrado')
-            console.log(usuarioRegistrado);
+/*             console.log('usuarioregistrado')
+            console.log(usuarioRegistrado); */
             if (usuarioRegistrado) {
                 return res.render('users/registerDb', {
                     errors: {
@@ -46,7 +46,7 @@ const usuarioControladorDB = {
                 imagen_perfil: req.file.filename, 
                 ocupacion_id: req.body.ocupacion_id
             }).then( (usuarioCreado) => {
-                console.log(usuarioCreado);
+                /* console.log(usuarioCreado); */
                 res.redirect('/productos/');
             })
         })
@@ -59,8 +59,8 @@ const usuarioControladorDB = {
     },
 
     procesoLogueo: (req, res) => {
-        console.log(req.body);
-        db.Usuarios.findOne({
+        /* console.log(req.body); */
+        const usuarioEncontrado = db.Usuarios.findOne({
             where: {
                 correo: req.body.correo
             },
@@ -74,64 +74,48 @@ const usuarioControladorDB = {
                     delete usuarioEncontrado.contrasenia;
                     req.session.usuarioLogueado = usuarioEncontrado;
 
-                    res.locals.usuarioLogueado = req.session.usuarioLogueado;
-                    console.log('sesion')
-                    console.log(req.session.usuarioLogueado);
-                    
-/*                     if(req.body.recordame) {
+                    if(req.body.recordame) {
                         res.cookie('usuarioCorreo', req.body.correo, {maxAge: 360000} )
-                    } */
-                    console.log('locals')
-                    console.log(res.locals);
-                    return res.redirect('/usuariosDB/perfil');
-                } else {
+                    }
+
+                    return res.redirect('/usuariosDB/perfil')
+                } 
                     return res.render('users/login', {
                         errors: {
-                            contrasenia: {
-                                msg: 'Contraseña incorrecta'
+                            correo: {
+                                msg: 'Credenciales invalidas'
                             }
                         }
                     });
-                }
-            } else {
-                return res.render('users/login', {
-                    errors: {
-                        correo: {
-                            msg: 'No se encuentra este correo en nuestra base de datos'
+            } 
+                    return res.render('users/login', {
+                        errors: {
+                            contrasenia: {
+                                msg: 'contraseña incorrecta'
                         }
                     }
                 });
-            }
+
         })
-        .catch(error => {
-            console.error("Error en procesoLogueo:", error);
-            return res.status(500).send("Error interno del servidor");
-        });
     },
     
-    
-     
     Perfil: (req, res) => {
         
-        res.locals.usuarioLogueado = req.session.usuarioLogueado;
+        console.log(req.cookies.usuarioCorreo);
 
-        console.log('locals');
-        console.log(res.locals.usuarioLogueado);
-
+        usuarioLog = req.session.usuarioLogueado
+           
         res.render('users/userProfile'/* , {
             usuario: req.session.usuarioLogueado
         } */)
+
     },
 
-/*     borrarUsuario: (req, res) => {
+    borrarUsuario: (req, res ) => {
         res.clearCookie('usuarioCorreo');
-        db.Usuario.destroy({
-            where: {
-                id: req.params.id
-            }
-        })
-        res.redirect('/usuariosDB/')
-    } */
+        req.session.destroy();
+        return res.redirect('/')
+    }
 
 }
 

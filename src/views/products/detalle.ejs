@@ -2,9 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle de Producto - Guitarra Modelo 84</title>
     <link rel="stylesheet" href="/css/productDetail.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -13,83 +16,65 @@
 
 <main>
     <div class="grande">
- 
-         <!--fotos-->
-         <article>
-             <img class="img1" src="/images/<%= producto.imagen_producto %>" alt="Guitarra criolla frente">
-         </article>
-         
+         <div class="producto-image">
+             <img class="img1" src="/images/products/<%= producto.imagen_producto %>">
+         </div>
          <!--info1-->
         <article class="cajaInfo">
             <div class="caja1">
-                <h1><%= producto.nombre %></h1>
-                <h1><%= producto.categoria_id %></h1>
-                <h3>Precio:</h3>
-                <h3 class="p">$<%= producto.precio %></h3>
-             </div>
-             <section class="uno">
-                <div class="color">
-                     <h2>Seleccion de colores</h2>
-                     <div class="form-group">
-                         <input type="radio" name="color" id="negra">
-                         <label for="negra"><%= producto.colors %></label>
-                     </div>
-<!--                      <div class="form-group">
-                         <input type="radio" name="color" id="marron" checked>
-                         <label for="marron">Marron</label>
-                     </div>
-                     
-                     <div class="form-group">
-                         <input type="radio" name="color" id="roja">
-                         <label for="roja">Roja</label>
-                     </div> -->
-                 </div>
+                <h1 class="p"><%= producto.nombre %></h1>
+                <p class="p" id="descripcion1"><%= producto.descripcion %></p>
+                <h3 class="p">Precio: $<%= producto.precio %></h3>
+                <h3 class="p"><%= producto.color %> </h3>
+                <label for="color" class="p">Seleccione color</label>
 
-                 <div class="desplegable">
-                     <div class="envio1">
-                         <i class="fa-solid fa-credit-card"></i>
-                         <h2 class>Formas de pago</h2>
-                     </div>
-                     
-                     <p>Aceptamos pagos en efectivo y con tarjeta de crédito. <br> Hasta 12 cuotas sin interés.</p>
+                <select name="color" class="p">
+                    <% colores.forEach(color => { %>
+                     <option value="<% color.nombre %>"
+                     ></option>
+                    <% }) %>
+                </select>
+            </div> 
+
+            <div class="desplegable">
+                <div class="envio1">
+                    <h2 class>Formas de pago</h2>
+                    <i class="fa-solid fa-credit-card"></i>
+                </div> 
+                    <p>Aceptamos pagos en efectivo y con tarjeta de crédito. <br> Hasta 12 cuotas sin interés.</p>
                      <select name="forma" id="forma">
                          <option disabled selected="formas de pago">Formas de Pago</option>
                          <option value="tarjeta de credito">Tarjeta de credito</option>
-                         <option value="tarjeta de debi4to">Tarjeta de debito</option>
+                         <option value="tarjeta de debito">Tarjeta de debito</option>
                          <option value="efectivo">Efectivo</option>
                          <option value="billetera virtual">Billetera virtual</option>
                      </select>
-                 </div>
-                 <div class="envio">
-                     <div class="envio1">
-                         <i class="fa-solid fa-truck"></i>
-                         <h2>Envío a Todo el País</h2>
-                     </div>
+            </div>
+
+            <div class="envio">
+                <div class="envio1">
+                    <h2>Envío a Todo el País</h2>
+                    <i class="fa-solid fa-truck"></i>
+                </div>
                      <p>Realizamos envíos a todas las provincias de Argentina.</p>
-                 </div>
+            </div>
                  
-                 <div lass="cantidad">
-                     <h2>Cantidad:</h2>
-                     <input type="number" value="1" min="1" max="10">
-                 </div>
-                 <div class="botones">
-                     <form action="/productos/carrito/<%= producto.id %>" method="get">
-                        <button class="añadir"  type="submit">COMPRAR AHORA</button>
-                      </form>
+            <div class="cantidad">
+                <h2>Cantidad:</h2>
+                <input id="forma" type="number" value="1" min="1" max="10">
+            </div>
+            
+            <div class="botones">
+                <form action="/productos/carrito/<%= producto.id %>" method="get" class="añadir">
+                    <button type="submit">COMPRAR AHORA</button>
+                </form>
 
-                     <button class="añadir">
-                         <h2>AÑADIR AL CARRITO</h2>
-                     </button>
-
-                     <a href="/productos/edition/<%= producto.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-                     <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                       <button type="submit" class="action-button delete">ELIMINAR</button>
-                     </form>
-
-
-                 </div>                
-             </section>
-         </article>
+                <a href="/productos/edition/<%= producto.id %>" class="añadir">EDITAR PRODUCTO</a>
+                <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex" class="añadir">
+                    <button type="submit">ELIMINAR PRODUCTO</button>
+                </form>
+            </div>                
+        </article>
     </div>
 
     
@@ -101,7 +86,8 @@
 
  </main> 
  
- <%- include('../partials/footer.ejs') %>
+<%- include('../partials/footer.ejs') %>  
+
 
 </body>
 

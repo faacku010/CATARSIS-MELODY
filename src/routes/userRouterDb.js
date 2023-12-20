@@ -14,10 +14,10 @@ const guestMiddleware = require('../middlewares/routes/guestMiddleware.js')
 router.get('/create/',guestMiddleware, usuarioDB.registroForm);
 router.post('/create/', upload.single("imagen_perfil") , validacionRegistro , usuarioDB.Registro); /* en upload va lo que trae el name del form de image */
 
-router.get('/login', usuarioDB.Logueo);
+router.get('/login',guestMiddleware, usuarioDB.Logueo);
 router.post('/login',upload.single("imagen_perfil"), usuarioDB.procesoLogueo);
 
-router.get('/perfil', usuarioDB.Perfil);
+router.get('/perfil',authMiddleware, usuarioDB.Perfil);
 
-/* router.get('/logout/', usuarioDB.borrarUsuario); */
+router.get('/logout/', usuarioDB.borrarUsuario);
 module.exports = router;

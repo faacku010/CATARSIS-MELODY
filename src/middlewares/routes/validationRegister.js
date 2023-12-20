@@ -1,14 +1,25 @@
 const path = require('path');
 const { body } = require('express-validator');
 
-module.exports = [
-        body('nombre').notEmpty().withMessage('debe completar el campo nombre'),
-        body('apellido').notEmpty().withMessage('debe completar el campo apellido'),
-        body('contrasenia').notEmpty().withMessage('debe completar el campo contraseña'),
-        body('correo').notEmpty().withMessage('debe completar el campo email').bail()
-        .isEmail().withMessage('debes escribir un formato de correo valido'),
+ const validacionRegistro = [
+        body('nombre')
+            .notEmpty()
+            .withMessage('debe completar el campo nombre').bail(),
+        body('apellido')
+            .notEmpty()
+            .withMessage('debe completar el campo apellido').bail(),
+        body('contrasenia')
+            .notEmpty()
+            .withMessage('debe completar este campo').bail()
+            .isLength({min : 8})
+            .withMessage('debe tener un minimo de 8 caracteres'),
+        body('correo')  
+            .notEmpty()
+            .withMessage('debe completar el campo email').bail()
+            .isEmail()
+            .withMessage('debes escribir un formato de correo valido'),
         body("imagen_perfil")
-        .custom((value, {req}) => {
+            .custom((value, {req}) => {
     
             let file = req.file;
             let acceptedExtensions = [".jpg", ".png", ".gif"];
@@ -25,3 +36,5 @@ module.exports = [
             return true;
         })
 ]
+
+module.exports = validacionRegistro;

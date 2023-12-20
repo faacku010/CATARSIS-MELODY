@@ -1,111 +1,84 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
 }
 
 body {
-  width: 368px;
-  background-color: #A75D5D;  
+  background: linear-gradient(#6524afbd, rgb(58, 100, 162));
 }
 
-header {
-  width: 100%;
-  background-color:#2121217e;
-  height: auto;
-}
+/* header */
 
-.conteiner-header {
-  width: 100%;
-  margin: 0;
-  padding: 5px;
-}
-
-.top-bar-header {
+.navbar {
+  background-color: rgba(163, 163, 163, 0.5);
   display: flex;
-  justify-content:flex-start;
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.burger-menu, .burger-carrito {
-  display: flex;
-  align-self: center;
   align-items: center;
-  justify-content: center;
-  background-color: darkolivegreen;
-  color: white;
-  font-size: 26px;
-  border-radius: 10px;
-  width: 50px;
-  height: 50px;
-  margin: 0px auto;
-  margin-top: -5px;
+  justify-content: space-between;
+  /* height: 57px; */
 }
-
-.logo {
-  width: 55%;
-  height: auto;
-  text-align: center;
-  display: flex;
-  padding: 0px 10px;
-  margin-bottom: 5px;
-}
-
-.bot-bar-header {
-  width: 100%;
-  height: auto;
-  display: flex;
-}
-
-.barra-busqueda {
-  display: flex;
-}
-
-.barra-busqueda input {
-  width: 80%;
-  height: 40px;
-  font-size: 16px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.barra-busqueda i {
+.nav_logo {
+  font-weight: bold;
   font-size: 20px;
-  margin: 0px 8px;
-  align-self: center;
+  color: white;
+  margin: 0 5px;
+}
+.nav_items {
+  position: absolute;
+  top: 50px;
+  background-color: rgba(160, 160, 160, 0.637);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: 0.3s ease all;
+}
+.nav_items a {
+  margin: 15px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+.nav_toggle {
+  display: flex; 
+  flex-direction: column;
+  margin: 15px;
+}
+.nav_toggle span {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin-bottom: 5px;
+  border-radius: 2px;  
+  transform-origin: 5px 0px;
+  transition: all 0.2s linear;
+}
+.close span {
+  transform:rotate(45deg) translate(0px, 0px);
+}
+.close span:nth-child(2){
+  display: none;
+}
+.close span:nth-child(3){
+  transform: rotate(-45deg) translate(-5px, 1px);
+}
+.open{ transform: translateX(0) !important}
+
+.banner {
+  display: none;
 }
 
 /* main */
 
-.sesion-register {
-  text-align: end;
-  width: auto;
-  height: auto;
-  margin-right: 5px;
-}
-
-.sesion-register a {
-  text-decoration: none;
-  color: black;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-
-
-.nav-marge{
-    margin-left : 10px;
-}
 .form-register {
-  width: 400px;
+  width: 90%;
   background: #FFC3A1;
-  padding: 30px;
+  padding: 25px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 20px;
   border-radius: 4px;
-  font-family: 'calibri';
-  color: white;
+  color: rgb(112, 112, 112); 
   box-shadow: 7px 13px 37px #000;
 }
 
@@ -116,14 +89,14 @@ header {
 
 .controls {
   width: 100%;
-  background: #EFB495;
+  background: #ffffffe0;
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 16px;
   border: 1px solid #b17b18;
   font-family: 'calibri';
   font-size: 18px;
-  color: white;
+  color: rgb(112, 112, 112); 
 }
 
 .form-register p {
@@ -152,6 +125,29 @@ header {
   margin: 16px 0;
   margin-left: 25px;
   font-size: 16px;
+}
+
+#button-cargar {
+  font-size: 15px;
+  padding: 3px;
+  width: 30%;
+  margin: 10px 0px;
+}
+
+.is-valid {
+  background-color: rgba(25, 135, 84, 0.39);
+  border: 2px #198754;
+}
+
+.is-invalid {
+  background-color: #F8D7DA;
+  border: 2px solid #842029;
+}
+.alert-warning{
+  color:#842029;
+  background-color: #F8D7DA;
+  text-align: center;
+  border-radius: 10px;
 }
 
 /*footer*/
@@ -191,67 +187,73 @@ text-decoration: none;
 
 @media (min-width: 768px) {
 
-  body {
-    width: 768px;
+/* header */
+
+.nav_logo {
+  margin: 10px 20px;
+}
+.nav_items {
+  position:static;
+  flex-direction: row-reverse;
+  background-color: orange;
+  transform: translateX(0%);
+}
+.nav_items a {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  position: relative;
+
+}
+.nav_items a::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(255, 5, 159);
+  transition: all 0.5s;
+}
+.nav_items a:hover::before{
+  width: 100% !important;
 }
 
-.top-bar-header {
-    background-color: rgba(95, 158, 160, 0.377);
-    justify-content: space-between;
+#image-header {
+  border-radius: 60px;
+  width: 35px;
+  margin: 0px 5px;
 }
 
-.logo {
-    width: auto;
-    height: 80px;
+.nav_toggle {
+  display: flex;
+  margin: 0;
+}
+.nav_toggle span {
+  display: none;
+}
+.banner {
+  display: block;
+}
+.banner img {
+  width: 100%;
 }
 
-.bot-bar-header {
-    justify-content: space-between;
-}
+/* main */
 
-.barra-busqueda {
-    width: 60%;
+.form {
+  padding-left: 10px;
 }
-
-.barra-busqueda input {
-    width: 60%;
-    font-size: 18px;
-    text-align: center;
-    border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 2px;
-}
-
-.barra-busqueda i {
-    font-size: 22px;
-    width: 40px;
-    height: 40px;
-    margin: 0px 2px;
-    padding: 10px 0px;
-    display: flex;
-    justify-content: center;
-    background-color: #ffffff;
-    border-radius: 10px;
-}
-
-.sesion-register {
-    font-size: 23px;
-    align-self: center;
-}
-
-.sesion-register a {
-    text-decoration: none;
-    color: black;
-    margin-right: 12px;
-    margin-bottom: 5px;
-    align-self: center;
-}
-
-.bot-bar-header input {
-    height: 40px;
-    align-self: center;
-}
-
+.form-register {
+  width: 40%;
+} 
+.controls {
+  width: 90%;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 16px;
+} 
 
 /* footer */
 
@@ -270,61 +272,11 @@ footer section {
 
 @media (min-width: 1200px) {
 
-  body {
-    width: 1200px;
-}
+/* main */
 
-header {
-    width: 90%;
-    margin: auto;
+.form-register {
+  width: 25%;
 }
-
-.logo {
-    width: 40%;
-    height: auto;
-}
-
-.burger-menu, .burger-carrito {
-    width: 70px;
-    font-size: 40px;
-    height: 70px;
-}
-
-.barra-busqueda {
-    width: 60%;
-    height: 80px;
-}
-
-.barra-busqueda input {
-    width: 70%;
-    height: 60px;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 2px;
-}
-
-.barra-busqueda i {
-    font-size: 30px;
-    width: 60px;
-    height: 60px;
-    margin: 0px 4px;
-    padding: 13px 0px;
-}
-
-.sesion-register {
-    font-size: 30px;
-}
-
-.sesion-register a {
-    text-decoration: none;
-    color: black;
-    margin-right: 12px;
-    margin-bottom: 5px;
-    align-self: center;
-}
-
 
 /* footer */
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catarsis Melody</title>
     <link href="/css/create.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
 </head>
 
@@ -14,12 +15,12 @@
 
      <main>
       <div class="formulario">
-        <h1 class>Añadir Productos</h1>
+        <h1 class>Añadir Producto</h1>
         <form action="/productos/create/" method="POST" enctype="multipart/form-data">
           <div class>
             <label for="nombre">Nombre del producto:</label>
             <br>
-            <input class="item-form" type="text"  name="nombre" placeholder="Ej: violin">
+            <input class="item-form" type="text"  name="nombre" placeholder="Ej: guitarra">
           </div>
 
           <div class>
@@ -34,9 +35,11 @@
           </div>
 
           <div class>
-            <label for="colors">Colores:</label>
-            <br>
-            <input class="item-form" type="text"  name="colors" required>
+            <label for="colores">Colores:</label>
+            <input 
+              class="item-form" 
+              type="text"  
+              name="colores">
           </div>
 
           <div class>

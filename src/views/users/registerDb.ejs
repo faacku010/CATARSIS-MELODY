@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/css/register.css">
   <title>Formulario Registro</title>
+  <link rel="stylesheet" href="/css/register.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 
 <body>
@@ -15,8 +17,9 @@
     <main>
 
         <section class="form-register">
-
-
+            <h4>Registro</h4>
+            <ul class="errores">
+            </ul>
             <form action="/usuariosDB/create" method="POST" enctype="multipart/form-data" class="form">
                 
                 <label for="nombre">nombre</label>
@@ -26,6 +29,8 @@
                     name="nombre"
                     id="nombre"
                     value="<%=locals.oldData ? oldData.nombre : null %>">
+
+                    <!-- <p class="error-nombre"></p> -->
                 
                     <% if (locals.errors && errors.nombre) { %>
                         <div class="text-danger">
@@ -75,7 +80,7 @@
                         </div>
                     <% } %>
 
-                <label for="imagen_perfil">seleccionar una imagen de perfil</label> 
+                <label for="imagen_perfil">seleccionar un avatar</label> 
                 <input 
                     type="file"
                     name="imagen_perfil"
@@ -89,7 +94,7 @@
                         </div>
                     <% } %>
     
-                <input id="button-cargar" type="submit" value="Guardar">
+                <input id="button-cargar" type="submit" value="Registrar">
 
             </form>
         </section>

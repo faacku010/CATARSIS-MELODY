@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catarsis Melody</title>
     <link href="/css/index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  
-<%- include('../partials/header.ejs') %>
+
+    <%- include('../partials/header.ejs') %>   
 
 <main>
-    <h2>BUSCAR POR CATEGORIAS</h2>
+    <h2>Productos</h2>
 
     <section class="destacados">
         <% productos.forEach(productos => { %>
@@ -21,8 +22,11 @@
                 <a href="/productos/detalle/<%= productos.id %>">
                     <img src="/images/products/<%= productos.imagen_producto %>" class="image-destacado">
                 </a>
-                    <p><%= productos.nombre %></p>
-                    <p>$ <%= productos.precio %></p>                
+                <div class="article-p">
+                    <p id="nombre"><%= productos.nombre %></p>
+                    <p id="precio">$ <%= productos.precio %></p>   
+                </div>
+             
             </article>
         <% }) %>
          </section>   
@@ -30,17 +34,6 @@
                 
     <h2>DESTACADOS</h2>   
     
-    <section>
-        <% for( let i = 0; i <= 5; i++ ) { %>
-            <article>
-                <img src="/images/<%= productos[i].imagen_producto %>" class="image-destacado">
-                <p><%= productos[i].nombre%> - <%= productos[i].categorias.nombre %>
-                </p>
-                <p>$ <%= productos[i].precio %></p>                
-            </article>
-        <% } %>
-    </section>
-
 </main>  
 
 <%- include('../partials/footer.ejs') %>

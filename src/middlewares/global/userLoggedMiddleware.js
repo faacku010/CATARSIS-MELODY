@@ -1,21 +1,33 @@
 const db = require('../../database/models');
 
-function userLoggedMiddleware(req, res, next) {
+async function userLoggedMiddleware(req, res, next) {
+	
 	res.locals.isLogged = false;
 
-	let emailInCookie = req.cookies.usuarioCorreo;
-	let userFromCookie = db.Usuarios('correo', emailInCookie);
+	const correoEnCookie = req.cookies.usuarioCorreo;
 
-	if (userFromCookie) {
-		req.session.usuarioLogueado = userFromCookie;
-	}
+	try {
+			if(req.cookies?.usuarioCorreo) {
+				const usuarioCookie = await db.Usuarios.findOne({where: {correo: req.cookies.usuarioCorreo}});
 
-	if (req.session.usuarioLogueado) {
-		res.locals.isLogged = true;
-		res.locals.usuarioLogueado = req.session.usuarioLogueado;
-	}
-
-	next();
+			if(usuarioCookie && usuarioCookie.correo === req.cookies.usuarioCorreo) {
+				uCookie = usuarioCookie;
+				}
+			if(uCookie) {
+				delete uCookie.contrasenia;
+				req.session.usuarioLogueado = uCookie;
+				}
+			}
+		 	if (req.session && req.session.usuarioLogueado) {
+					res.locals.isLogged = true;
+					res.locals.usuarioLogueado = req.session.usuarioLogueado;
+				}
+		}
+		catch (error) {
+			console.error("Error en middleware de inicio de sesión:", error);
+		  }
+		
+		  next();
 }
 
 module.exports = userLoggedMiddleware;

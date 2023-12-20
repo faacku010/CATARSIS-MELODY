@@ -12,6 +12,14 @@ const productoControladorDB = {
         /* return res.json(productos); */
     },
 
+    carrito: function (req, res) {
+        db.Productos.findByPk(req.params.id)
+        .then((producto) => {
+            /* console.log(producto); */
+            res.render('products/carrito', {producto})  
+        }) 
+    },
+
     createForm: (req, res) => {
         db.Categorias.findAll()
         .then ( (categorias) => {
@@ -24,6 +32,7 @@ const productoControladorDB = {
         db.Productos.create({
             nombre: req.body.nombre,
             precio: req.body.precio,
+            colores: req.body.colores,
             categoria_id: req.body.categoria_id,
             descripcion: req.body.descripcion,
             descuento: req.body.descuento,
@@ -33,22 +42,16 @@ const productoControladorDB = {
     },
 
     detalle: function (req, res) {
-        db.Productos.findByPk(req.params.id,
-        {include: [{association: "categorias"}]})
-        .then((producto) => {
-            /* console.log(producto); */
-            res.render('products/detalle', {producto})  
-        }) 
-    },
+        let pedidoProducto = db.Productos.findByPk(req.params.id);
+        let pedidoColor = db.Productos.findAll();
 
-    carrito: function (req, res) {
-        db.Productos.findByPk(req.params.id)
-        .then((producto) => {
-            /* console.log(producto); */
-            res.render('products/carrito', {producto})  
-        }) 
-    },
+        Promise.all([pedidoProducto, pedidoColor])
 
+            .then(([productoDB, colorDB]) => {
+                /* console.log(producto); */
+                res.render('products/detalle', {producto : productoDB, colores : colorDB})  
+            }) 
+    },
 
     edit: function (req, res) {
         let pedidoProducto = db.Productos.findByPk(req.params.id);

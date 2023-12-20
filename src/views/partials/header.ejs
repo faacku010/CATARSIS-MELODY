@@ -1,35 +1,35 @@
 <header>
-    <div class="conteiner-header">
-        <div class="top-bar-header">
-            <div class="burger-menu">
-                <i class="fa fa-bars burger"></i>
-            </div>
-            <a href="/">
-                <img src="/images/CATARSIS2.png" class="logo">    
-            </a>
-            <div class="burger-carrito">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>            
+    <nav class="navbar">
+        <div class="nav_logo">LOGO</div>
+        <div class="nav_items" id="_items">
+            <% if (locals.isLogged) { %>
+                <a href="/productos/create">CREAR PRODUCTO</a>
+                <a href="/usuariosDB/logout">CERRAR SESION</a>
+                <a href="/productos/carrito"><!-- CARRITO --> <i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="/usuariosDB/perfil">
+                    <img id="image-header" src="/images/users/<%= locals.usuarioLogueado.imagen_perfil %>">
+                    <%= locals.usuarioLogueado.nombre %>
+                </a>
+            <% } else { %>
+                <a href="/usuariosDB/login">INICIAR SESION</a>
+                <a href="/usuariosDB/create">REGISTRARSE</a>
+            <% } %>  
+        </div>
+        <div class="nav_toggle" id="_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+   </nav>
+   <div class="banner">
+        <img src="/images/banner3.png">
     </div>
-    <div class="banner">
-        <img src="/images/banner.png">
-    </div>
-    <div class="bot-bar-header">
-            <div class="barra-busqueda">
-                <input type="text" placeholder="¿Que estas buscando?">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="sesion-register">
-                <% if (locals.isLogged) { %>
-                    <a href="/usuariosDB/perfil">
-                        <img src="/images/users/default-image.png">
-                        <%= locals.usuarioLogueado.nombre %>
-                        <a class="dropdown-item" href="/usuariosDB/logout">Logout</a>
-                    </a>                 
-                <% } else { %>
-                <a href="/usuariosDB/login">iniciar sesion</a>
-                <a href="/usuariosDB/create">registro</a>
-                <% } %>
-            </div>
-    </div>
+
+   <script class="script">
+    _toggle.onclick = () =>{
+        _items.classList.toggle("open")
+        _toggle.classList.toggle("close")
+    }
+   </script>    
 </header>
+
