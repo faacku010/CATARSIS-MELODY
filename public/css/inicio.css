@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background: radial-gradient(#6524afbd, rgb(58, 100, 162));
+}
+
+main {
+    margin: 5px;
+    background-color: rgba(128, 128, 128, 0.623);
+}
+.caja-categoria {
+
+}
+.categorias {
+    margin: auto;
+}

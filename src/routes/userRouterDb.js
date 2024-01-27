@@ -15,7 +15,7 @@ router.get('/create/',guestMiddleware, usuarioDB.registroForm);
 router.post('/create/', upload.single("imagen_perfil") , validacionRegistro , usuarioDB.Registro); /* en upload va lo que trae el name del form de image */
 
 router.get('/login',guestMiddleware, usuarioDB.Logueo);
-router.post('/login',upload.single("imagen_perfil"), usuarioDB.procesoLogueo);
+router.post('/login',upload.single("imagen_perfil"),validacionRegistro , usuarioDB.procesoLogueo);
 
 router.get('/perfil',authMiddleware, usuarioDB.Perfil);
 

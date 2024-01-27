@@ -12,56 +12,57 @@ body {
 /* header */
 
 .navbar {
-  background-color: rgba(163, 163, 163, 0.5);
+  background-color: rgba(255, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: space-between;
   /* height: 57px; */
 }
 .nav_logo {
-  font-weight: bold;
-  font-size: 20px;
-  color: white;
-  margin: 0 5px;
+   font-weight: bold;
+   font-size: 20px;
+   color: white;
+   margin: 0 5px;
 }
 .nav_items {
-  position: absolute;
-  top: 50px;
-  background-color: rgba(160, 160, 160, 0.637);
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  transform: translateX(-100%);
-  transition: 0.3s ease all;
+   position: absolute;
+   top: 50px;
+   background-color: rgba(160, 160, 160, 0.637);
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   transform: translateX(-100%);
+   transition: 0.3s ease all;
 }
 .nav_items a {
-  margin: 15px;
-  color: white;
-  text-decoration: none;
-  text-align: center;
+   margin: 15px;
+   color: white;
+   text-decoration: none;
+   text-align: center;
 }
 .nav_toggle {
-  display: flex; 
-  flex-direction: column;
-  margin: 15px;
+   display: flex; 
+   flex-direction: column;
+   margin: 15px;
 }
+
 .nav_toggle span {
-  width: 30px;
-  height: 4px;
-  background-color: white;
-  margin-bottom: 5px;
-  border-radius: 2px;  
-  transform-origin: 5px 0px;
-  transition: all 0.2s linear;
+   width: 30px;
+   height: 4px;
+   background-color: white;
+   margin-bottom: 5px;
+   border-radius: 2px;  
+   transform-origin: 5px 0px;
+   transition: all 0.2s linear;
 }
 .close span {
-  transform:rotate(45deg) translate(0px, 0px);
+   transform:rotate(45deg) translate(0px, 0px);
 }
 .close span:nth-child(2){
-  display: none;
+   display: none;
 }
 .close span:nth-child(3){
-  transform: rotate(-45deg) translate(-5px, 1px);
+   transform: rotate(-45deg) translate(-5px, 1px);
 }
 .open{ transform: translateX(0) !important}
 
@@ -189,13 +190,10 @@ text-decoration: none;
 
 /* header */
 
-.nav_logo {
-  margin: 10px 20px;
-}
 .nav_items {
   position:static;
   flex-direction: row-reverse;
-  background-color: orange;
+  /* background-color: orange; */
   transform: translateX(0%);
 }
 .nav_items a {
@@ -223,6 +221,7 @@ text-decoration: none;
 #image-header {
   border-radius: 60px;
   width: 35px;
+
   margin: 0px 5px;
 }
 

@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>login</title>
   <link rel="stylesheet" href="/css/login.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -16,19 +17,23 @@
     <main>
         <section class="form-login">
 
-            <form action="/usuariosDB/login/" method="POST">
-                <label for="correo"></label>
+            <ul class="errores">
+            </ul>
+            <form action="/usuariosDB/login/" method="POST" class="form">
+                
                 <div>
+                    <label for="correo"></label>
                     <input 
                         class="controls" 
                         type="email" 
                         name="correo" 
-                        id="email" 
-                        placeholder="Ingrese su correo " required>
+                        id="correo" 
+                        placeholder="Ingrese su correo " required
+                        value="<%=locals.oldData ? oldData.correo : null %>">
 
                         <% if (locals.errors && errors.correo) { %>
                             <div class="text-danger">
-                                <%= errors.correo.msg %>
+                               <p><%= errors.correo.msg %></p> 
                             </div>
                             <% } %>
                 </div>
@@ -39,16 +44,15 @@
                         class="controls" 
                         type="password" 
                         name="contrasenia" 
-                        id="password" 
-                        placeholder="Ingrese su Contraseña">
+                        id="contrasenia" 
+                        placeholder="Ingrese su Contraseña"
+                        value="<%=locals.oldData ? oldData.contrasenia : null %>">
                         <% if (locals.errors && errors.contrasenia) { %>
                             <div>
-                                <%= errors.contrasenia.msg %>
+                               <p><%= errors.contrasenia.msg %></p> 
                             </div>
                             <% } %>                    
                 </div>    
-
-
 
                 <label for="recordame"></label>
                 <input 
@@ -67,6 +71,8 @@
     </main>
 
     <%- include('../partials/footer.ejs') %>
+
+    <script src="/js/loginFront.js"></script>
 
 </body>
 

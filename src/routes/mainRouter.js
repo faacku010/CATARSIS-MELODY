@@ -9,6 +9,9 @@ const mainController = require('../controllers/MainController.js');
 /* En vez de app.get, utilizamos router.get. Esto va "guardando" en router las distintas rutas, que luego exportamos */
 
 /* Procesa el pedido de get con ruta */
+
+router.get('/inicio', mainController.menu);
+
 router.get('/', mainController.listado);
 
 

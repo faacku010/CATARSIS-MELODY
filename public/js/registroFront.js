@@ -17,8 +17,6 @@ window.addEventListener("load", () => {
 
         /* let nombreError = document.querySelector('.error-nombre'); */
 
-        
-
         if (nombre.value == "") {
             /* valido = false; */
             errors.push("El campo nombre no puede estar vacío");

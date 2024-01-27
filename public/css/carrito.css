@@ -12,7 +12,7 @@ body {
 /* header */
 
 .navbar {
-    background-color: rgba(163, 163, 163, 0.5);
+    background-color: rgba(255, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -243,13 +243,10 @@ section h2 {
 
     /* header */
 
-    .nav_logo {
-        margin: 10px 20px;
-    }
     .nav_items {
         position:static;
         flex-direction: row-reverse;
-        background-color: orange;
+        /* background-color: orange; */
         transform: translateX(0%);
     }
     .nav_items a {
@@ -277,6 +274,7 @@ section h2 {
     #image-header {
         border-radius: 60px;
         width: 35px;
+
         margin: 0px 5px;
     }
 
