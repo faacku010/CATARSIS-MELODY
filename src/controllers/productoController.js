@@ -12,6 +12,17 @@ const productoControladorDB = {
         /* return res.json(productos); */
     },
 
+    categorias: (req, res) => {
+        db.Productos.findAll({
+            where: {
+                categoria_id: req.params.id,
+            }
+        })
+        .then( (productos) => {
+            res.render('products/categorias', {productos});
+        })
+    },
+
     carrito: function (req, res) {
         db.Productos.findByPk(req.params.id)
         .then((producto) => {
@@ -60,8 +71,8 @@ const productoControladorDB = {
         Promise.all([pedidoProducto, pedidoCategoria])
 
         .then(([productoDB, categoriaDB]) => {
-            console.log(productoDB);
-            console.log(categoriaDB);
+            /* console.log(productoDB);
+            console.log(categoriaDB); */
             res.render('products/productEdition', { producto : productoDB, categorias : categoriaDB })
         })
 

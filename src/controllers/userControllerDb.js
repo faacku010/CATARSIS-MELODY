@@ -101,7 +101,7 @@ const usuarioControladorDB = {
     
     Perfil: (req, res) => {
         
-        console.log(req.cookies.usuarioCorreo);
+        /* console.log(req.cookies.usuarioCorreo); */
 
         usuarioLog = req.session.usuarioLogueado
            

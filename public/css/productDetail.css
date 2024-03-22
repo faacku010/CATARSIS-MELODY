@@ -7,15 +7,15 @@
 }
 
 body {
-    background: linear-gradient(#6524afbd, rgb(58, 100, 162));
+    background: radial-gradient(#8BC34A, rgb(58, 100, 162));  
 }
 
 .navbar {
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: #2121214f;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* height: 57px; */
+    /* height: 70px; */
  }
  .nav_logo {
      font-weight: bold;
@@ -169,45 +169,52 @@ body {
 /* footer */
 
 footer section {
-    border-radius: 10px;
-    background-color: #2121217e;
     width: 80%;
-    height: auto;
-    margin: auto;
-    margin-top: 10px;
-    padding: 4px;
-    text-align: center;
-    justify-content: center;
+    margin: 10px auto;
 }
-
-section h2 {
+.footer-items, .redes {
+    margin: 10px 0px;
+    background-color: #2121217e;
+    border-radius: 5px;
+    text-align: center;
+}
+.footer-items h2 {
     margin-bottom: 10px;
 }
-
-.redes ul {
-    margin: auto;
-    height: auto;
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    text-decoration: none;
+.footer-items p, .caja a {
+    padding: 2px 10px;
+    display: block;
 }
+.redes {
+    justify-content: space-between;
+    text-decoration: none;
 
+}
+.caja2 {
+    display: flex;
+}
 .redes a {
     font-size: 30px;
-}
-
-.section li {
+    margin: auto;
     text-decoration: none;
+    color: black;
+}
+.a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
 }
 
 @media (min-width: 768px) {
 
+    .nav_logo {
+        /* margin: 10px 20px; */
+    }
     .nav_items {
         position:static;
         flex-direction: row-reverse;
-        /* background-color: orange; */
         transform: translateX(0%);
+        background-color: transparent;
     }
     .nav_items a {
         display: flex;
@@ -224,20 +231,18 @@ section h2 {
         bottom: 0;
         width: 0;
         height: 2px;
-        background: rgb(255, 5, 159);
+        background: rgb(12, 175, 93);
         transition: all 0.5s;
     }
     .nav_items a:hover::before{
         width: 100% !important;
     }
-
     #image-header {
         border-radius: 60px;
         width: 35px;
 
         margin: 0px 5px;
     }
-
     .nav_toggle {
         display: flex;
         margin: 0;
@@ -250,6 +255,15 @@ section h2 {
     }
     .banner img {
         width: 100%;
+    }
+    .caja-categoria {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        /* margin: 5px 0px;  */
+    }
+    .categorias {
+        margin: 12px 0px 0px;
     }
 
     /* main */
@@ -352,22 +366,20 @@ section h2 {
 
     /* footer */
 
-    footer {
-        width: 80%;
+    footer section {
         display: flex;
         flex-wrap: wrap;
-        margin: auto;
+        justify-content: space-evenly;
     }
-    
-    footer section {
-        width: 30%;
-        height: 160px;
+    .footer-items {
+        width: 40%;
     }
 
 }
 
 @media (min-width: 1200px) {
 
+    /* main */
     .grande{
         width: 70%;
         margin: 10px auto;
@@ -476,21 +488,18 @@ section h2 {
      
     /* footer */
 
-    footer {
-        width: 100%;
-        flex-wrap: nowrap;
-        margin-top: 30px 0px;
-        border-top: solid 2px #0000006c;
-        padding: 30px 0px;
-    }
-
     footer section {
-        margin: 0px 10px;
-        height: auto;
-        padding: 0px 5px;
+        width: 100%;
+    }
+    .footer-items {
+        width: 20%;
+        justify-content: space-around;
     }
 
-    .footer-items ul, .footer-items p {
-        font-size: 19px;
+    .footer-items p {
+        font-size: 15px;
+    }
+    .caja2 a {
+        align-self: center;
     }
 }

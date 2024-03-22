@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background: radial-gradient(#8BC34A, rgb(58, 100, 162));  
+}
+
+article {
+    display: flex;
+}
+
+.caja {
+    margin: 0px 10px;
+    align-self: center;
+    background-color: antiquewhite;
+    font-size: 18px;
+}
+.caja h3, .caja p, .caja input {
+    background-color: #8BC34A;
+    padding: 5px 0px;
+    margin: 5px;
+}
+
+.caja input {
+    width: 20%;
+    text-align: center;
+}

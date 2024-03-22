@@ -10,9 +10,9 @@ const mainController = require('../controllers/MainController.js');
 
 /* Procesa el pedido de get con ruta */
 
-router.get('/inicio', mainController.menu);
+router.get('/', mainController.menu);
 
-router.get('/', mainController.listado);
+router.get('/inicio', mainController.listado);
 
 
 /* exportamos la variable router ya con todas las rutas "guardadas", que se usara en app.js */

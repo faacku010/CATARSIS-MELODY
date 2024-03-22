@@ -9,7 +9,7 @@
             <% if (locals.isLogged) { %>
                 <a href="/productos/create">CREAR PRODUCTO</a>
                 <a href="/usuariosDB/logout">CERRAR SESION</a>
-                <a href="/productos/carrito"><!-- CARRITO --> <i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="/productos/carrito">CARRITO <i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="/usuariosDB/perfil">
                     <img id="image-header" src="/images/users/<%= locals.usuarioLogueado.imagen_perfil %>">
                     <%= locals.usuarioLogueado.nombre %>
@@ -25,9 +25,9 @@
             <span></span>
         </div>
    </nav>
-   <div class="banner">
+<!--    <div class="banner">
         <img src="/images/banner4.png">
-    </div>
+    </div> -->
 
    <script class="script">
     _toggle.onclick = () =>{

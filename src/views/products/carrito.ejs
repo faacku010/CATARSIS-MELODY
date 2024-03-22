@@ -6,38 +6,30 @@
     <title>carrito de compras</title>
     <link rel="stylesheet" href=" /css/carrito.css">
     <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
 </head>
 <body>
 
     <%- include('../partials/header.ejs') %>
 
    <main>
-    <div><h1>Carrito de compras</h1></div>
+        <h1>Carrito de compras</h1>
     <section>
-        <article class="conteiner-article">
-            <img src="/images/<%= producto.imagen_producto %>" width="100px" class="article-image">  
-        <div class="item-conteiner">
-            <div class="txt-article">
-                <h4><%= producto.nombre %></h4> 
+        <article class="article">
+            <div class="caja-menu">
+                <img src="/images/products/<%= producto.imagen_producto %>" width="125px">  
             </div>
-            <div class="icon-article">
-                <i class="fa-solid fa-trash-can"></i> 
+            <div class="caja-menu">
+                <h4><%= producto.nombre %></h4>
+                <p>$<%= producto.precio %></p>
+                <label>cantidad</label>
+                <input type="number" name placeholder="1">
             </div>
-            <div class="button-article">
-                <input type="number"> 
-            </div>
-            <div class="price-article">
-                <h5>$<%= producto.precio %></h5> 
-            </div>
-        </div>
         </article>    
-
     </section>
 
     <section class="seccion-bot-main">
-        <div>
-            <h2>shipping Calculator</h2>              
-        </div>            
         <div class="formulario">
             <form action="/shipping-calculator" method="POST" class="create-form">       
             <div class="control-form">
@@ -57,7 +49,7 @@
             </div>
             <div class="control-form">
                 <label>Codigo Postal</label>
-                <input type="number" name="CodigoPostal" placeholder="Su codigo Postal" class="control">
+                <input type="number" name="CodigoPostal" placeholder="codigo Postal" class="control">
             </div>
             <div class="control-form">
                 <button type="submit">Actualizar</button>
@@ -65,26 +57,24 @@
             </form>
         </div>
 
-        <div><h2>Total del carrito</h2></div>
-    <div class="formulario">
-        <div class="create-form">
-            <div class="subtotal-carrito">
-                <h5>subtotal del carrito</h5>
-                <p>$ <%= producto.precio %></p>
-            </div>
-            <div class="subtotal-carrito">
-                <h5>Pedido Total</h5>
-                <p>$ <%= producto.precio %></p>
-            </div>
+        <div class="formulario">
+            <div class="create-form">
+                <div class="subtotal-carrito">
+                    <h5>subtotal del carrito</h5>
+                    <p>$ <%= producto.precio %></p>
+                </div>
+                <div class="subtotal-carrito">
+                    <h5>Pedido Total</h5>
+                    <p>$ <%= producto.precio %></p>
+                </div>
             <div class="caja-boton">
                 <button type="submit" class="boton-compra">Finalizar Compra</button>
             </div>
             <div>
                 <a href="/">Continuar Comprando</a>
             </div>
-        </div>            
-    </div>
-
+            </div>            
+        </div>
     </section>
 </main> 
 

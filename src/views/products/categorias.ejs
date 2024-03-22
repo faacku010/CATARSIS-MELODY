@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catarsis Melody</title>
-    <link href="/css/index.css" rel="stylesheet">
+    <title>categorias</title>
+    <link href="/css/categorias.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/normalize.css">
 </head>
-
 <body>
+    
+    <%- include('../partials/header.ejs') %>
 
-    <%- include('../partials/header.ejs') %>   
-
-<main>
-    <h2>Productos</h2>
-
-    <section class="destacados">
+    <main class="destacados">
         <% productos.forEach(productos => { %>
             <article>
                 <a href="/productos/detalle/<%= productos.id %>">
@@ -30,11 +26,9 @@
              
             </article>
         <% }) %>
-         </section>   
+         </section>  
 
- 
-</main>  
-
-<%- include('../partials/footer.ejs') %>
+         <%- include('../partials/footer.ejs') %>
 
 </body>
+</html>

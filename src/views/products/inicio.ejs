@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catarsis Melody</title>
-    <link rel="stylesheet" href=" /css/inicio.css">
+    <link rel="stylesheet" href="/css/inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d6458ce523.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/normalize.css">
 </head>
 <body>
+
+    <%- include('../partials/header.ejs') %> 
 
 <main>
     <section class="caja-categoria">
         <% categorias.forEach(categorias => { %>
             <article class="categorias">
-                <p><%= categorias.nombre %></p>
-                <img src="">   
+                <a href="/productos/categorias/<%= categorias.id %>">
+                    <img src="/images/utileria/<%= categorias.imagen %>" class="article-img">
+                    <h1><%= categorias.nombre %></h1>   
+                </a>
             </article>
             
-
         <% }) %>
 
     </section>
 </main>
+
+    <%- include('../partials/footer.ejs') %>
 
 </body>

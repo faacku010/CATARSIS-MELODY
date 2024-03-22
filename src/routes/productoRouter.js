@@ -15,6 +15,8 @@ router.post('/create/', upload.single("imagen_producto") ,productoDB.createProdu
 /* devolver un producto */
 router.get('/detalle/:id/', productoDB.detalle)
 
+router.get('/categorias/:id/', productoDB.categorias)
+
 // carrito
 router.get('/carrito/:id/', productoDB.carrito);
 
